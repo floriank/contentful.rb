@@ -2,6 +2,434 @@
 http_interactions:
 - request:
     method: get
+    uri: https://cdn.contentful.com/spaces/cfexampleapi/environments/master/content_types?limit=1000
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - RubyContentfulGem/0.1.1
+      Authorization:
+      - Bearer b4c0n73n7fu1
+      Content-Type:
+      - application/vnd.contentful.delivery.v1+json
+      Host:
+      - cdn.contentful.com
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 19 Jun 2020 12:38:21 GMT
+      Server:
+      - nginx/1.1.19
+      Access-Control-Allow-Headers:
+      - Accept,Accept-Language,Authorization,Cache-Control,Content-Length,Content-Range,Content-Type,DNT,Destination,Expires,If-Match,If-Modified-Since,If-None-Match,Keep-Alive,Last-Modified,Origin,Pragma,Range,User-Agent,X-Http-Method-Override,X-Mx-ReqToken,X-Requested-With,X-Contentful-Version,X-Contentful-Content-Type,X-Contentful-Organization
+      Access-Control-Allow-Methods:
+      - GET,HEAD,OPTIONS
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Max-Age:
+      - '86400'
+      Cache-Control:
+      - max-age=0
+      Content-Type:
+      - application/vnd.contentful.delivery.v1+json
+      Etag:
+      - "\"4fd389dc6eb0344fa98184c811f12f8d\""
+      X-Contentful-Request-Id:
+      - 85f-649640028
+      Content-Length:
+      - '11939'
+      Accept-Ranges:
+      - bytes
+      Via:
+      - 1.1 varnish
+      Age:
+      - '2003'
+      X-Served-By:
+      - cache-fra1233-FRA
+      X-Cache:
+      - HIT
+      X-Cache-Hits:
+      - '1'
+      Vary:
+      - Accept-Encoding
+    body:
+      encoding: UTF-8
+      string: |
+        {
+          "sys": {
+            "type": "Array"
+          },
+          "total": 2,
+          "skip": 0,
+          "limit": 100,
+          "items": [
+            {
+              "description": "Newsartikel",
+              "displayField": "title",
+              "fields": [
+                {
+                  "disabled": false,
+                  "id": "title",
+                  "localized": false,
+                  "name": "Title",
+                  "omitted": false,
+                  "required": false,
+                  "type": "Symbol"
+                },
+                {
+                  "disabled": false,
+                  "id": "subtitle",
+                  "localized": false,
+                  "name": "Untertitel (kurz)",
+                  "omitted": false,
+                  "required": false,
+                  "type": "Symbol"
+                },
+                {
+                  "disabled": false,
+                  "id": "slug",
+                  "localized": false,
+                  "name": "Slug",
+                  "omitted": false,
+                  "required": false,
+                  "type": "Symbol"
+                },
+                {
+                  "disabled": false,
+                  "id": "date",
+                  "localized": false,
+                  "name": "Datum",
+                  "omitted": false,
+                  "required": true,
+                  "type": "Date"
+                },
+                {
+                  "disabled": false,
+                  "id": "author",
+                  "linkType": "Entry",
+                  "localized": false,
+                  "name": "Autor*in",
+                  "omitted": false,
+                  "required": true,
+                  "type": "Link"
+                },
+                {
+                  "disabled": false,
+                  "id": "headerImage",
+                  "linkType": "Asset",
+                  "localized": false,
+                  "name": "Header-Bild",
+                  "omitted": false,
+                  "required": true,
+                  "type": "Link"
+                },
+                {
+                  "disabled": false,
+                  "id": "rich_text",
+                  "localized": false,
+                  "name": "Rich Text",
+                  "omitted": false,
+                  "required": false,
+                  "type": "RichText"
+                },
+                {
+                  "disabled": false,
+                  "id": "text",
+                  "localized": false,
+                  "name": "Text",
+                  "omitted": false,
+                  "required": false,
+                  "type": "Text"
+                },
+                {
+                  "disabled": false,
+                  "id": "category",
+                  "linkType": "Entry",
+                  "localized": false,
+                  "name": "Kategorie",
+                  "omitted": false,
+                  "required": true,
+                  "type": "Link"
+                },
+                {
+                  "disabled": true,
+                  "id": "categoryName",
+                  "localized": false,
+                  "name": "Kategorie",
+                  "omitted": false,
+                  "required": false,
+                  "type": "Symbol"
+                },
+                {
+                  "disabled": false,
+                  "id": "winners",
+                  "items": {
+                    "linkType": "Entry",
+                    "type": "Link",
+                    "validations": [
+                      {
+                        "linkContentType": [
+                          "winner"
+                        ]
+                      }
+                    ]
+                  },
+                  "localized": false,
+                  "name": "Gewinner*innen",
+                  "omitted": false,
+                  "required": false,
+                  "type": "Array"
+                },
+                {
+                  "disabled": true,
+                  "id": "winnersIds",
+                  "items": {
+                    "type": "Symbol",
+                    "validations": []
+                  },
+                  "localized": false,
+                  "name": "Gewinner*innen",
+                  "omitted": false,
+                  "required": false,
+                  "type": "Array"
+                },
+                {
+                  "disabled": false,
+                  "id": "tags",
+                  "items": {
+                    "linkType": "Entry",
+                    "type": "Link",
+                    "validations": [
+                      {
+                        "linkContentType": [
+                          "tag"
+                        ]
+                      }
+                    ]
+                  },
+                  "localized": false,
+                  "name": "Tags",
+                  "omitted": false,
+                  "required": false,
+                  "type": "Array"
+                },
+                {
+                  "disabled": true,
+                  "id": "tagNames",
+                  "items": {
+                    "type": "Symbol",
+                    "validations": []
+                  },
+                  "localized": true,
+                  "name": "Tags",
+                  "omitted": false,
+                  "required": false,
+                  "type": "Array"
+                },
+                {
+                  "disabled": false,
+                  "id": "related_news",
+                  "items": {
+                    "linkType": "Entry",
+                    "type": "Link",
+                    "validations": [
+                      {
+                        "linkContentType": [
+                          "news"
+                        ],
+                        "message": "Es können nur News-Artikel referenziert werden"
+                      }
+                    ]
+                  },
+                  "localized": false,
+                  "name": "Ähnliche Artikel",
+                  "omitted": false,
+                  "required": false,
+                  "type": "Array"
+                },
+                {
+                  "disabled": false,
+                  "id": "wpId",
+                  "localized": false,
+                  "name": "Wordpress-ID",
+                  "omitted": false,
+                  "required": false,
+                  "type": "Integer"
+                },
+                {
+                  "disabled": false,
+                  "id": "migrationStatus",
+                  "localized": false,
+                  "name": "Status der Migration zu Rich Text",
+                  "omitted": false,
+                  "required": false,
+                  "type": "Symbol"
+                }
+              ],
+              "name": "Artikel",
+              "sys": {
+                "createdAt": "2016-09-13T14:05:58.389Z",
+                "environment": {
+                  "sys": {
+                    "id": "master",
+                    "linkType": "Environment",
+                    "type": "Link"
+                  }
+                },
+                "id": "news",
+                "revision": 46,
+                "space": {
+                  "sys": {
+                    "id": "thownz9vc5w0",
+                    "linkType": "Space",
+                    "type": "Link"
+                  }
+                },
+                "type": "ContentType",
+                "updatedAt": "2020-02-27T17:50:06.646Z"
+              }
+            },
+            {
+              "description": "",
+              "displayField": "nickname",
+              "fields": [
+                {
+                  "disabled": false,
+                  "id": "nickname",
+                  "localized": false,
+                  "name": "Öffentlicher Name",
+                  "omitted": false,
+                  "required": true,
+                  "type": "Symbol"
+                },
+                {
+                  "disabled": false,
+                  "id": "biOrdinal",
+                  "localized": false,
+                  "name": "Nummer des Grundeinkommens",
+                  "omitted": false,
+                  "required": true,
+                  "type": "Integer"
+                },
+                {
+                  "disabled": false,
+                  "id": "entrantID",
+                  "localized": false,
+                  "name": "User ID",
+                  "omitted": false,
+                  "required": true,
+                  "type": "Integer"
+                },
+                {
+                  "disabled": false,
+                  "id": "headerImage",
+                  "linkType": "Asset",
+                  "localized": true,
+                  "name": "Header-Foto",
+                  "omitted": false,
+                  "required": false,
+                  "type": "Link"
+                },
+                {
+                  "disabled": false,
+                  "id": "title",
+                  "localized": false,
+                  "name": "Überschrift",
+                  "omitted": false,
+                  "required": false,
+                  "type": "Symbol"
+                },
+                {
+                  "disabled": false,
+                  "id": "subtitle",
+                  "localized": false,
+                  "name": "Unterüberschrift",
+                  "omitted": false,
+                  "required": false,
+                  "type": "Symbol"
+                },
+                {
+                  "disabled": false,
+                  "id": "abstract",
+                  "localized": false,
+                  "name": "Einleitungsparagraph",
+                  "omitted": false,
+                  "required": false,
+                  "type": "Symbol"
+                },
+                {
+                  "disabled": false,
+                  "id": "story",
+                  "localized": false,
+                  "name": "Geschichte",
+                  "omitted": false,
+                  "required": false,
+                  "type": "Text"
+                },
+                {
+                  "disabled": false,
+                  "id": "news",
+                  "items": {
+                    "linkType": "Entry",
+                    "type": "Link",
+                    "validations": [
+                      {
+                        "linkContentType": [
+                          "news"
+                        ]
+                      }
+                    ]
+                  },
+                  "localized": false,
+                  "name": "Newsartikel",
+                  "omitted": false,
+                  "required": false,
+                  "type": "Array"
+                },
+                {
+                  "disabled": false,
+                  "id": "achievement",
+                  "localized": false,
+                  "name": "(z.B. hat ihr eigenes Unternehmen gegründet.)",
+                  "omitted": false,
+                  "required": false,
+                  "type": "Symbol"
+                }
+              ],
+              "name": "Gewinner*in",
+              "sys": {
+                "createdAt": "2016-09-26T15:22:20.444Z",
+                "environment": {
+                  "sys": {
+                    "id": "master",
+                    "linkType": "Environment",
+                    "type": "Link"
+                  }
+                },
+                "id": "winner",
+                "revision": 9,
+                "space": {
+                  "sys": {
+                    "id": "thownz9vc5w0",
+                    "linkType": "Space",
+                    "type": "Link"
+                  }
+                },
+                "type": "ContentType",
+                "updatedAt": "2017-11-14T05:40:13.609Z"
+              }
+            }
+          ]
+        }
+      http_version:
+  recorded_at: Fri, 19 Jun 2020 12:38:21 GMT
+
+- request:
+    method: get
     uri: https://cdn.contentful.com/spaces/cfexampleapi/environments/master/entries
     body:
       encoding: US-ASCII
@@ -21,7 +449,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 16 Apr 2014 09:00:21 GMT
+      - Fri, 19 Jun 2020 12:38:21 GMT
       Server:
       - nginx/1.1.19
       Access-Control-Allow-Headers:
@@ -1805,5 +2233,5 @@ http_interactions:
            }
         }
     http_version:
-  recorded_at: Wed, 16 Apr 2014 09:00:21 GMT
+  recorded_at: Fri, 19 Jun 2020 12:38:21 GMT
 recorded_with: VCR 2.9.0

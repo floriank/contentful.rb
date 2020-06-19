@@ -784,4 +784,39 @@ describe Contentful::Entry do
       }
     end
   end
+
+  context 'when encountering circular references (issue #225)' do
+    module Content
+      module News
+        class Article < Contentful::Entry; end
+        class Winner < Contentful::Entry; end
+      end
+    end
+
+    let(:client) do
+      Contentful::Client.new(
+        space: 'cfexampleapi',
+        access_token: 'b4c0n73n7fu1',
+        reuse_entries: false,
+        dynamic_entries: :auto,
+        max_include_resolution_depth: 4,
+        raise_for_empty_fields: false,
+        entry_mapping: {
+          'news' => Content::News::Article,
+          'winner' => Content::News::Winner
+        }
+      )
+    end
+
+    let(:entries) { client.entries }
+    let(:winner) { entries.first }
+
+    it 'encounters a bug in hydration' do
+      vcr('entries/issue_225_broken') do
+        news = winner.news
+
+        # look for failing images in them rich text of the news
+      end
+    end
+  end
 end
