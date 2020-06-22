@@ -2,6 +2,434 @@
 http_interactions:
 - request:
     method: get
+    uri: https://cdn.contentful.com/spaces/cfexampleapi/environments/master/content_types?limit=1000
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - RubyContentfulGem/0.1.1
+      Authorization:
+      - Bearer b4c0n73n7fu1
+      Content-Type:
+      - application/vnd.contentful.delivery.v1+json
+      Host:
+      - cdn.contentful.com
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 19 Jun 2020 12:38:21 GMT
+      Server:
+      - nginx/1.1.19
+      Access-Control-Allow-Headers:
+      - Accept,Accept-Language,Authorization,Cache-Control,Content-Length,Content-Range,Content-Type,DNT,Destination,Expires,If-Match,If-Modified-Since,If-None-Match,Keep-Alive,Last-Modified,Origin,Pragma,Range,User-Agent,X-Http-Method-Override,X-Mx-ReqToken,X-Requested-With,X-Contentful-Version,X-Contentful-Content-Type,X-Contentful-Organization
+      Access-Control-Allow-Methods:
+      - GET,HEAD,OPTIONS
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Max-Age:
+      - '86400'
+      Cache-Control:
+      - max-age=0
+      Content-Type:
+      - application/vnd.contentful.delivery.v1+json
+      Etag:
+      - "\"4fd389dc6eb0344fa98184c811f12f8d\""
+      X-Contentful-Request-Id:
+      - 85f-649640028
+      Content-Length:
+      - '11939'
+      Accept-Ranges:
+      - bytes
+      Via:
+      - 1.1 varnish
+      Age:
+      - '2003'
+      X-Served-By:
+      - cache-fra1233-FRA
+      X-Cache:
+      - HIT
+      X-Cache-Hits:
+      - '1'
+      Vary:
+      - Accept-Encoding
+    body:
+      encoding: UTF-8
+      string: |
+        {
+          "sys": {
+            "type": "Array"
+          },
+          "total": 2,
+          "skip": 0,
+          "limit": 100,
+          "items": [
+            {
+              "description": "Newsartikel",
+              "displayField": "title",
+              "fields": [
+                {
+                  "disabled": false,
+                  "id": "title",
+                  "localized": false,
+                  "name": "Title",
+                  "omitted": false,
+                  "required": false,
+                  "type": "Symbol"
+                },
+                {
+                  "disabled": false,
+                  "id": "subtitle",
+                  "localized": false,
+                  "name": "Untertitel (kurz)",
+                  "omitted": false,
+                  "required": false,
+                  "type": "Symbol"
+                },
+                {
+                  "disabled": false,
+                  "id": "slug",
+                  "localized": false,
+                  "name": "Slug",
+                  "omitted": false,
+                  "required": false,
+                  "type": "Symbol"
+                },
+                {
+                  "disabled": false,
+                  "id": "date",
+                  "localized": false,
+                  "name": "Datum",
+                  "omitted": false,
+                  "required": true,
+                  "type": "Date"
+                },
+                {
+                  "disabled": false,
+                  "id": "author",
+                  "linkType": "Entry",
+                  "localized": false,
+                  "name": "Autor*in",
+                  "omitted": false,
+                  "required": true,
+                  "type": "Link"
+                },
+                {
+                  "disabled": false,
+                  "id": "headerImage",
+                  "linkType": "Asset",
+                  "localized": false,
+                  "name": "Header-Bild",
+                  "omitted": false,
+                  "required": true,
+                  "type": "Link"
+                },
+                {
+                  "disabled": false,
+                  "id": "rich_text",
+                  "localized": false,
+                  "name": "Rich Text",
+                  "omitted": false,
+                  "required": false,
+                  "type": "RichText"
+                },
+                {
+                  "disabled": false,
+                  "id": "text",
+                  "localized": false,
+                  "name": "Text",
+                  "omitted": false,
+                  "required": false,
+                  "type": "Text"
+                },
+                {
+                  "disabled": false,
+                  "id": "category",
+                  "linkType": "Entry",
+                  "localized": false,
+                  "name": "Kategorie",
+                  "omitted": false,
+                  "required": true,
+                  "type": "Link"
+                },
+                {
+                  "disabled": true,
+                  "id": "categoryName",
+                  "localized": false,
+                  "name": "Kategorie",
+                  "omitted": false,
+                  "required": false,
+                  "type": "Symbol"
+                },
+                {
+                  "disabled": false,
+                  "id": "winners",
+                  "items": {
+                    "linkType": "Entry",
+                    "type": "Link",
+                    "validations": [
+                      {
+                        "linkContentType": [
+                          "winner"
+                        ]
+                      }
+                    ]
+                  },
+                  "localized": false,
+                  "name": "Gewinner*innen",
+                  "omitted": false,
+                  "required": false,
+                  "type": "Array"
+                },
+                {
+                  "disabled": true,
+                  "id": "winnersIds",
+                  "items": {
+                    "type": "Symbol",
+                    "validations": []
+                  },
+                  "localized": false,
+                  "name": "Gewinner*innen",
+                  "omitted": false,
+                  "required": false,
+                  "type": "Array"
+                },
+                {
+                  "disabled": false,
+                  "id": "tags",
+                  "items": {
+                    "linkType": "Entry",
+                    "type": "Link",
+                    "validations": [
+                      {
+                        "linkContentType": [
+                          "tag"
+                        ]
+                      }
+                    ]
+                  },
+                  "localized": false,
+                  "name": "Tags",
+                  "omitted": false,
+                  "required": false,
+                  "type": "Array"
+                },
+                {
+                  "disabled": true,
+                  "id": "tagNames",
+                  "items": {
+                    "type": "Symbol",
+                    "validations": []
+                  },
+                  "localized": true,
+                  "name": "Tags",
+                  "omitted": false,
+                  "required": false,
+                  "type": "Array"
+                },
+                {
+                  "disabled": false,
+                  "id": "related_news",
+                  "items": {
+                    "linkType": "Entry",
+                    "type": "Link",
+                    "validations": [
+                      {
+                        "linkContentType": [
+                          "news"
+                        ],
+                        "message": "Es können nur News-Artikel referenziert werden"
+                      }
+                    ]
+                  },
+                  "localized": false,
+                  "name": "Ähnliche Artikel",
+                  "omitted": false,
+                  "required": false,
+                  "type": "Array"
+                },
+                {
+                  "disabled": false,
+                  "id": "wpId",
+                  "localized": false,
+                  "name": "Wordpress-ID",
+                  "omitted": false,
+                  "required": false,
+                  "type": "Integer"
+                },
+                {
+                  "disabled": false,
+                  "id": "migrationStatus",
+                  "localized": false,
+                  "name": "Status der Migration zu Rich Text",
+                  "omitted": false,
+                  "required": false,
+                  "type": "Symbol"
+                }
+              ],
+              "name": "Artikel",
+              "sys": {
+                "createdAt": "2016-09-13T14:05:58.389Z",
+                "environment": {
+                  "sys": {
+                    "id": "master",
+                    "linkType": "Environment",
+                    "type": "Link"
+                  }
+                },
+                "id": "news",
+                "revision": 46,
+                "space": {
+                  "sys": {
+                    "id": "thownz9vc5w0",
+                    "linkType": "Space",
+                    "type": "Link"
+                  }
+                },
+                "type": "ContentType",
+                "updatedAt": "2020-02-27T17:50:06.646Z"
+              }
+            },
+            {
+              "description": "",
+              "displayField": "nickname",
+              "fields": [
+                {
+                  "disabled": false,
+                  "id": "nickname",
+                  "localized": false,
+                  "name": "Öffentlicher Name",
+                  "omitted": false,
+                  "required": true,
+                  "type": "Symbol"
+                },
+                {
+                  "disabled": false,
+                  "id": "biOrdinal",
+                  "localized": false,
+                  "name": "Nummer des Grundeinkommens",
+                  "omitted": false,
+                  "required": true,
+                  "type": "Integer"
+                },
+                {
+                  "disabled": false,
+                  "id": "entrantID",
+                  "localized": false,
+                  "name": "User ID",
+                  "omitted": false,
+                  "required": true,
+                  "type": "Integer"
+                },
+                {
+                  "disabled": false,
+                  "id": "headerImage",
+                  "linkType": "Asset",
+                  "localized": true,
+                  "name": "Header-Foto",
+                  "omitted": false,
+                  "required": false,
+                  "type": "Link"
+                },
+                {
+                  "disabled": false,
+                  "id": "title",
+                  "localized": false,
+                  "name": "Überschrift",
+                  "omitted": false,
+                  "required": false,
+                  "type": "Symbol"
+                },
+                {
+                  "disabled": false,
+                  "id": "subtitle",
+                  "localized": false,
+                  "name": "Unterüberschrift",
+                  "omitted": false,
+                  "required": false,
+                  "type": "Symbol"
+                },
+                {
+                  "disabled": false,
+                  "id": "abstract",
+                  "localized": false,
+                  "name": "Einleitungsparagraph",
+                  "omitted": false,
+                  "required": false,
+                  "type": "Symbol"
+                },
+                {
+                  "disabled": false,
+                  "id": "story",
+                  "localized": false,
+                  "name": "Geschichte",
+                  "omitted": false,
+                  "required": false,
+                  "type": "Text"
+                },
+                {
+                  "disabled": false,
+                  "id": "news",
+                  "items": {
+                    "linkType": "Entry",
+                    "type": "Link",
+                    "validations": [
+                      {
+                        "linkContentType": [
+                          "news"
+                        ]
+                      }
+                    ]
+                  },
+                  "localized": false,
+                  "name": "Newsartikel",
+                  "omitted": false,
+                  "required": false,
+                  "type": "Array"
+                },
+                {
+                  "disabled": false,
+                  "id": "achievement",
+                  "localized": false,
+                  "name": "(z.B. hat ihr eigenes Unternehmen gegründet.)",
+                  "omitted": false,
+                  "required": false,
+                  "type": "Symbol"
+                }
+              ],
+              "name": "Gewinner*in",
+              "sys": {
+                "createdAt": "2016-09-26T15:22:20.444Z",
+                "environment": {
+                  "sys": {
+                    "id": "master",
+                    "linkType": "Environment",
+                    "type": "Link"
+                  }
+                },
+                "id": "winner",
+                "revision": 9,
+                "space": {
+                  "sys": {
+                    "id": "thownz9vc5w0",
+                    "linkType": "Space",
+                    "type": "Link"
+                  }
+                },
+                "type": "ContentType",
+                "updatedAt": "2017-11-14T05:40:13.609Z"
+              }
+            }
+          ]
+        }
+      http_version:
+  recorded_at: Fri, 19 Jun 2020 12:38:21 GMT
+
+- request:
+    method: get
     uri: https://cdn.contentful.com/spaces/cfexampleapi/environments/master/entries
     body:
       encoding: US-ASCII
@@ -60,1750 +488,1750 @@ http_interactions:
       encoding: UTF-8
       string: |
         {
-           "sys": {
-              "type": "Array"
-           },
-           "total": 1,
-           "skip": 0,
-           "limit": 1,
-           "items": [
-              {
-                 "sys": {
-                    "space": {
-                       "sys": {
-                          "type": "Link",
-                          "linkType": "Space",
-                          "id": "thownz9vc5w0"
-                       }
-                    },
-                    "id": "5dtrVVJefeyCoaMugqoUUk",
-                    "type": "Entry",
-                    "createdAt": "2017-01-15T12:01:20.725Z",
-                    "updatedAt": "2020-05-19T12:00:42.246Z",
-                    "environment": {
-                       "sys": {
-                          "id": "master",
-                          "type": "Link",
-                          "linkType": "Environment"
-                       }
-                    },
-                    "revision": 14,
-                    "contentType": {
-                       "sys": {
-                          "type": "Link",
-                          "linkType": "ContentType",
-                          "id": "winner"
-                       }
-                    },
-                    "locale": "de-DE"
-                 },
-                 "fields": {
-                    "nickname": " Jesta",
-                    "biOrdinal": 34,
-                    "entrantID": 32878,
-                    "story": " ",
-                    "news": [
-                       {
-                          "sys": {
-                             "type": "Link",
-                             "linkType": "Entry",
-                             "id": "vGienFOrtIM8G8IAo2uuA"
-                          }
-                       },
-                       {
-                          "sys": {
-                             "type": "Link",
-                             "linkType": "Entry",
-                             "id": "1TUjXt07IAMyA0oCmAWyY4"
-                          }
-                       }
-                    ],
-                    "achievement": "realisiert ihre eigene Utopie - sie bietet ihr Slow Business Coaching\nzu einem Offenen Preis an."
-                 }
-              }
-           ],
-           "includes": {
-              "Entry": [
-                 {
-                    "sys": {
-                       "space": {
-                          "sys": {
-                             "type": "Link",
-                             "linkType": "Space",
-                             "id": "thownz9vc5w0"
-                          }
-                       },
-                       "id": "1TUjXt07IAMyA0oCmAWyY4",
-                       "type": "Entry",
-                       "createdAt": "2017-01-08T13:00:46.564Z",
-                       "updatedAt": "2020-03-17T18:09:28.129Z",
-                       "environment": {
-                          "sys": {
-                             "id": "master",
-                             "type": "Link",
-                             "linkType": "Environment"
-                          }
-                       },
-                       "revision": 20,
-                       "contentType": {
-                          "sys": {
-                             "type": "Link",
-                             "linkType": "ContentType",
-                             "id": "news"
-                          }
-                       },
-                       "locale": "de-DE"
-                    },
-                    "fields": {
-                       "title": "Gewinnerin Jesta plant ihr eigenes BGE-Experiment",
-                       "slug": "gewinnerin-jesta-plant-ihr-eigenes-bge-experiment",
-                       "date": "2016-05-03T00:00+01:00",
-                       "author": {
-                          "sys": {
-                             "type": "Link",
-                             "linkType": "Entry",
-                             "id": "2RbmIbD4k8eOQCEeOCckqi"
-                          }
-                       },
-                       "headerImage": {
-                          "sys": {
-                             "type": "Link",
-                             "linkType": "Asset",
-                             "id": "5AGBz5Aqm4ImSQAs2mIOIO"
-                          }
-                       },
-                       "rich_text": {
-                          "data": {},
-                          "content": [
-                             {
-                                "data": {},
-                                "content": [
-                                   {
-                                      "data": {},
-                                      "marks": [],
-                                      "value": "Ich starre auf mein Handy, wo gerade eine SMS eingegangen ist.\nWäre sie von irgendwem anderen, hätte ich sie inhaltlich sofort als\nSpam gelöscht. Aber sie ist von Greta.",
-                                      "nodeType": "text"
-                                   }
-                                ],
-                                "nodeType": "paragraph"
-                             },
-                             {
-                                "data": {},
-                                "content": [
-                                   {
-                                      "data": {},
-                                      "content": [
-                                         {
-                                            "data": {},
-                                            "marks": [],
-                                            "value": "Uaaaaaa, Jesta! Herzlichen Glückwunsch. Der Michel aus Lönneberga\nhat dich zur Grundeinkommensgewinnerin gemacht.",
-                                            "nodeType": "text"
-                                         }
-                                      ],
-                                      "nodeType": "paragraph"
-                                   },
-                                   {
-                                      "data": {},
-                                      "content": [
-                                         {
-                                            "data": {},
-                                            "marks": [],
-                                            "value": "Ist das ein Witz? Wirklich?",
-                                            "nodeType": "text"
-                                         }
-                                      ],
-                                      "nodeType": "paragraph"
-                                   },
-                                   {
-                                      "data": {},
-                                      "content": [
-                                         {
-                                            "data": {},
-                                            "marks": [],
-                                            "value": "Jaaaa. Es ist wahr!",
-                                            "nodeType": "text"
-                                         }
-                                      ],
-                                      "nodeType": "paragraph"
-                                   },
-                                   {
-                                      "data": {},
-                                      "content": [
-                                         {
-                                            "data": {},
-                                            "marks": [],
-                                            "value": "Oh, mein Gott!!! Ich stehe im Wald. Wirklich. Und heule.",
-                                            "nodeType": "text"
-                                         }
-                                      ],
-                                      "nodeType": "paragraph"
-                                   },
-                                   {
-                                      "data": {},
-                                      "content": [
-                                         {
-                                            "data": {},
-                                            "marks": [],
-                                            "value": "Ich freue mich so für euch!",
-                                            "nodeType": "text"
-                                         }
-                                      ],
-                                      "nodeType": "paragraph"
-                                   }
-                                ],
-                                "nodeType": "blockquote"
-                             },
-                             {
-                                "data": {},
-                                "content": [
-                                   {
-                                      "data": {},
-                                      "marks": [],
-                                      "value": "Dein Thema, es kommt zu dir. Ich stehe im Wald. Wirklich. Auf einer\nkleinen steinernen Brücke – unter mir das Nonnenfließ, wo Biber ihre\nWasserburg errichtet haben. Ich bin unterwegs auf meiner monatlichen\nWandertour auf der 66-Seen-Route um Berlin diesmal zwischen Biesenthal\nund Falkenberg.",
-                                      "nodeType": "text"
-                                   }
-                                ],
-                                "nodeType": "paragraph"
-                             },
-                             {
-                                "data": {},
-                                "content": [
-                                   {
-                                      "data": {},
-                                      "marks": [],
-                                      "value": "Ich setzte mich auf das kleinste Brückengeländer der Welt und schmeiß\nfast mein Handy in die",
-                                      "nodeType": "text"
-                                   },
-                                   {
-                                      "data": {
-                                         "uri": "http://biberburg.es/"
-                                      },
-                                      "content": [
-                                         {
-                                            "data": {},
-                                            "marks": [],
-                                            "value": "Biberburg.Es",
-                                            "nodeType": "text"
-                                         }
-                                      ],
-                                      "nodeType": "hyperlink"
-                                   },
-                                   {
-                                      "data": {},
-                                      "marks": [],
-                                      "value": " rast in mir. Das Blut. Das Adrenalin. Die Gedanken. Die Ideen\nund Möglichkeiten. Und ganz oben schwimmt eigentlich nur eins: Na dann\nlos, dann machst du jetzt dein Experiment. Jetzt probierst du es aus.",
-                                      "nodeType": "text"
-                                   }
-                                ],
-                                "nodeType": "paragraph"
-                             },
-                             {
-                                "data": {},
-                                "content": [
-                                   {
-                                      "data": {},
-                                      "marks": [],
-                                      "value": "Ich versuche meine Frau anzurufen. Die Verbindung ist mies. Es\nhilft nichts, dass ich jetzt laut schluchze beim Reden.",
-                                      "nodeType": "text"
-                                   }
-                                ],
-                                "nodeType": "paragraph"
-                             },
-                             {
-                                "data": {},
-                                "content": [
-                                   {
-                                      "data": {},
-                                      "content": [
-                                         {
-                                            "data": {},
-                                            "marks": [],
-                                            "value": "Ich habe gewonnen…",
-                                            "nodeType": "text"
-                                         }
-                                      ],
-                                      "nodeType": "paragraph"
-                                   },
-                                   {
-                                      "data": {},
-                                      "content": [
-                                         {
-                                            "data": {},
-                                            "marks": [],
-                                            "value": "Was hast du gewonnen?",
-                                            "nodeType": "text"
-                                         }
-                                      ],
-                                      "nodeType": "paragraph"
-                                   },
-                                   {
-                                      "data": {},
-                                      "content": [
-                                         {
-                                            "data": {},
-                                            "marks": [],
-                                            "value": "Das bedingungslose Grundeinkommen.",
-                                            "nodeType": "text"
-                                         }
-                                      ],
-                                      "nodeType": "paragraph"
-                                   },
-                                   {
-                                      "data": {},
-                                      "content": [
-                                         {
-                                            "data": {},
-                                            "marks": [],
-                                            "value": "Wie? Warum hast du das gewonnen?",
-                                            "nodeType": "text"
-                                         }
-                                      ],
-                                      "nodeType": "paragraph"
-                                   },
-                                   {
-                                      "data": {},
-                                      "content": [
-                                         {
-                                            "data": {},
-                                            "marks": [],
-                                            "value": "Ich habe es als Crowdhörnchen unterstützt. Dadurch war ich automatisch\nin jeder Verlosung drin.",
-                                            "nodeType": "text"
-                                         }
-                                      ],
-                                      "nodeType": "paragraph"
-                                   },
-                                   {
-                                      "data": {},
-                                      "content": [
-                                         {
-                                            "data": {},
-                                            "marks": [],
-                                            "value": "Du warst ein was?",
-                                            "nodeType": "text"
-                                         }
-                                      ],
-                                      "nodeType": "paragraph"
-                                   }
-                                ],
-                                "nodeType": "blockquote"
-                             },
-                             {
-                                "data": {},
-                                "content": [
-                                   {
-                                      "data": {},
-                                      "marks": [],
-                                      "value": "Wir verschieben Gespräch auf abends, wo ich ihr das Crowdhörnchen\nerkläre und meine monatliche Unterstützung für das Projekt. Wir trinken\nSekt, ich heule noch ein bisschen und erkläre den Kindern, was Freudentränen\nsind. Unsere Tochter mag es trotzdem nicht, wenn ich weine und stopft\nmir ein Gummibärchen in den Mund. Ich streiche ihr über den Kopf und\ngehe dann nachsehen, warum unser Sohn nichts mehr anhat außer Gummistiefel.\nDas große Feiern mit zwei kleinen Kindern…",
-                                      "nodeType": "text"
-                                   }
-                                ],
-                                "nodeType": "paragraph"
-                             },
-                             {
-                                "data": {},
-                                "content": [
-                                   {
-                                      "data": {},
-                                      "marks": [],
-                                      "value": "Ich glaube an das bedingungslose Grundeinkommen. Bedingungslos.\nIch verfechte es, wo ich kann. Privat als auch in meiner Arbeit.",
-                                      "nodeType": "text"
-                                   }
-                                ],
-                                "nodeType": "paragraph"
-                             },
-                             {
-                                "data": {},
-                                "content": [
-                                   {
-                                      "data": {},
-                                      "marks": [],
-                                      "value": "Ich glaube daran, dass wenn die Existenzangst weg ist, wir zur\nvollen Größe erwachsen und wirklich das in unser Arbeit geben können,\nwas wir in diese Welt träumen möchten, was wir beitragen wollen.",
-                                      "nodeType": "text"
-                                   }
-                                ],
-                                "nodeType": "paragraph"
-                             },
-                             {
-                                "data": {},
-                                "content": [
-                                   {
-                                      "data": {},
-                                      "marks": [],
-                                      "value": "Ich glaube an das glückliche Arbeiten. Nicht als Luxus. Sondern\nals Grundvoraussetzung dafür, dass wir irgendetwas von Wert (er-)schaffen.",
-                                      "nodeType": "text"
-                                   }
-                                ],
-                                "nodeType": "paragraph"
-                             },
-                             {
-                                "data": {},
-                                "content": [
-                                   {
-                                      "data": {},
-                                      "marks": [],
-                                      "value": "Und mit all dem nun also - Vorhang auf für das Ausprobieren meiner\nUtopie. Ich habe schon lange davon geträumt und auch viel davon erzählt,\ndass es mein Ziel ist, irgendwann so arbeiten zu können, dass sich meine\nKlienten selbst aussuchen können, was sie mir zahlen.  Nach unserer\nArbeit zusammen entscheiden sie, was es ihnen wert ist und was sie sich\ninnerhalb ihres Budgets leisten möchten.",
-                                      "nodeType": "text"
-                                   }
-                                ],
-                                "nodeType": "paragraph"
-                             },
-                             {
-                                "data": {},
-                                "content": [
-                                   {
-                                      "data": {},
-                                      "marks": [],
-                                      "value": "Ich arbeite als (Slow) Business Coach und Trainerin für intuitives\nZeitmanagement und zu meinen Hauptklienten gehören Selbstständige, Eltern,\nVisionäre… Die meisten meiner Klienten fallen in mindestens zwei dieser\ndrei Kategorien. Der Zeitpunkt unserer Arbeit zusammen fällt oft auch\nin den Wiedereinstieg nach der Elternzeit, nach einer Auszeit, und auch\nmal nach dem Burn-out. Zeiten in denen Geld nicht unbedingt zu den Hauptressourcen\nzählt.",
-                                      "nodeType": "text"
-                                   }
-                                ],
-                                "nodeType": "paragraph"
-                             },
-                             {
-                                "data": {},
-                                "content": [
-                                   {
-                                      "data": {},
-                                      "marks": [],
-                                      "value": "Ich arbeite zwar schon von Anfang an auch im Tausch und möchte\ndies auch nicht missen. Da aber, meine Vermieter, der Supermarkt, die\nKita meiner Kinder und viele andere meine Dienste nicht im Tausch für\ndas, was ich von ihnen brauche annehmen, kam es auch schon dazu, dass\nich Tauschangebote ablehnen musste.",
-                                      "nodeType": "text"
-                                   }
-                                ],
-                                "nodeType": "paragraph"
-                             },
-                             {
-                                "data": {},
-                                "content": [
-                                   {
-                                      "data": {},
-                                      "marks": [],
-                                      "value": "Das Projekt Offener Preis ist ein Experiment.  Schon aus meiner\nErfahrung mit dem Tauschen weiß ich, dass nicht alles einfach immer\nnur einfach und klar ist.  Daher jetzt meine Utopie als Experiment mit\nder offiziellen Möglichkeit des Scheiterns.",
-                                      "nodeType": "text"
-                                   }
-                                ],
-                                "nodeType": "paragraph"
-                             },
-                             {
-                                "data": {},
-                                "content": [
-                                   {
-                                      "data": {},
-                                      "marks": [],
-                                      "value": "Aber ich will es halt wissen, ob Arbeiten und Bezahlung auch über\nVertrauen läuft. Über Selbsteinschätzung. Kann ich das Ganze überhaupt\nhalten oder kommen mir blöde Gedanken und Gefühle?  Und wenn ja, welche? \nWelche tollen Gefühle kommen? Wie steht es mit der Angst?  Auch wenn\nmeine Existenzangst jetzt für ein Jahr aufgefangen ist – Was ist da\nnoch? Und wie ist das Ganze für meine Klienten? Werden sie die Option\nder eigenen Preisfestlegung wählen oder fühlen sie sich besser den von\nmir genannten Preis zu zahlen? Kommen sie jetzt, weil sie es sich vorher\nnicht leisten konnten? Oder kommen sie jetzt gar nicht, weil es mit\neinem unklaren Gefühl verbunden ist…",
-                                      "nodeType": "text"
-                                   }
-                                ],
-                                "nodeType": "paragraph"
-                             },
-                             {
-                                "data": {},
-                                "content": [
-                                   {
-                                      "data": {},
-                                      "marks": [],
-                                      "value": "Ich weiß es nicht, will’s aber rauskriegen und dokumentieren. Vielleicht\nwird ein Buch draus, vielleicht ein Blog Artikel, vielleicht ein Podcast…",
-                                      "nodeType": "text"
-                                   }
-                                ],
-                                "nodeType": "paragraph"
-                             },
-                             {
-                                "data": {},
-                                "content": [
-                                   {
-                                      "data": {},
-                                      "marks": [],
-                                      "value": "Für mich ist das Jahr bedingungsloses Grundeinkommen ein Stipendium\nfür mein ganz eigenes Forschungsprojekt zum glücklichen Arbeiten. Es\nist Freiheit von Existenzangst durch Grundabsicherung.  Es ist Zeit,\ndie ich diesem Experiment widme. Mit dem bedingungslosen Grundeinkommen,\nkann ich endlich so arbeiten, wie ich es mir wünsche…",
-                                      "nodeType": "text"
-                                   }
-                                ],
-                                "nodeType": "paragraph"
-                             },
-                             {
-                                "data": {},
-                                "content": [
-                                   {
-                                      "data": {},
-                                      "marks": [],
-                                      "value": "Und für diese Freiheit und Möglichkeit danke ich euch allen – allen\nCrowdhörnchen & dem Team des Mein Grundeinkommen, sowie allen anderen\nUnterstützerInnen der Idee selbst!",
-                                      "nodeType": "text"
-                                   }
-                                ],
-                                "nodeType": "paragraph"
-                             },
-                             {
-                                "data": {},
-                                "content": [
-                                   {
-                                      "data": {},
-                                      "marks": [],
-                                      "value": "Habt herzlich liebsten Dank für diese Chance! \n",
-                                      "nodeType": "text"
-                                   },
-                                   {
-                                      "data": {
-                                         "uri": "https://www.mein-grundeinkommen.de/menschen/32878"
-                                      },
-                                      "content": [
-                                         {
-                                            "data": {},
-                                            "marks": [],
-                                            "value": "Jesta",
-                                            "nodeType": "text"
-                                         }
-                                      ],
-                                      "nodeType": "hyperlink"
-                                   },
-                                   {
-                                      "data": {},
-                                      "marks": [],
-                                      "value": "\n",
-                                      "nodeType": "text"
-                                   }
-                                ],
-                                "nodeType": "paragraph"
-                             },
-                             {
-                                "data": {},
-                                "content": [
-                                   {
-                                      "data": {},
-                                      "marks": [],
-                                      "value": "PS: Wie das Experiment selbst läuft, werde ich erst im Nachhinein\nöffentlich machen. Aber wie es ist im Grundeinkommen Jahr zu leben und\nwas dabei sonst noch so rauskommt, werde ich auch vorher schon mal berichten…",
-                                      "nodeType": "text"
-                                   }
-                                ],
-                                "nodeType": "paragraph"
-                             }
-                          ],
-                          "nodeType": "document"
-                       },
-                       "category": {
-                          "sys": {
-                             "type": "Link",
-                             "linkType": "Entry",
-                             "id": "51TZUB6OqswsyQAu2g04ME"
-                          }
-                       },
-                       "categoryName": "Gewinner*innen",
-                       "winners": [
-                          {
-                             "sys": {
-                                "type": "Link",
-                                "linkType": "Entry",
-                                "id": "5dtrVVJefeyCoaMugqoUUk"
-                             }
-                          }
-                       ],
-                       "winnersIds": [
-                          "34"
-                       ],
-                       "wpId": 1310,
-                       "migrationStatus": "Fertig migriert (keine Probleme)"
-                    }
-                 },
-                 {
-                    "sys": {
-                       "space": {
-                          "sys": {
-                             "type": "Link",
-                             "linkType": "Space",
-                             "id": "thownz9vc5w0"
-                          }
-                       },
-                       "id": "29OfZHKGSQsmaGMIyo6QUK",
-                       "type": "Entry",
-                       "createdAt": "2017-01-08T13:59:17.616Z",
-                       "updatedAt": "2020-03-18T08:32:32.608Z",
-                       "environment": {
-                          "sys": {
-                             "id": "master",
-                             "type": "Link",
-                             "linkType": "Environment"
-                          }
-                       },
-                       "revision": 4,
-                       "contentType": {
-                          "sys": {
-                             "type": "Link",
-                             "linkType": "ContentType",
-                             "id": "author"
-                          }
-                       },
-                       "locale": "de-DE"
-                    },
-                    "fields": {
-                       "name": "Michael Bohmeyer",
-                       "portrait": {
-                          "sys": {
-                             "type": "Link",
-                             "linkType": "Asset",
-                             "id": "5qabJquRheIOMqCGAcKWwe"
-                          }
-                       },
-                       "emailaddress": "support@mein-grundeinkommen.de"
-                    }
-                 },
-                 {
-                    "sys": {
-                       "space": {
-                          "sys": {
-                             "type": "Link",
-                             "linkType": "Space",
-                             "id": "thownz9vc5w0"
-                          }
-                       },
-                       "id": "2RbmIbD4k8eOQCEeOCckqi",
-                       "type": "Entry",
-                       "createdAt": "2017-01-08T12:12:44.693Z",
-                       "updatedAt": "2017-02-16T00:31:38.461Z",
-                       "environment": {
-                          "sys": {
-                             "id": "master",
-                             "type": "Link",
-                             "linkType": "Environment"
-                          }
-                       },
-                       "revision": 6,
-                       "contentType": {
-                          "sys": {
-                             "type": "Link",
-                             "linkType": "ContentType",
-                             "id": "author"
-                          }
-                       },
-                       "locale": "de-DE"
-                    },
-                    "fields": {
-                       "name": "Maheba",
-                       "portrait": {
-                          "sys": {
-                             "type": "Link",
-                             "linkType": "Asset",
-                             "id": "73HeCUD0Ry8Ai0EW4gcWMK"
-                          }
-                       },
-                       "emailaddress": "maheba@mein-grundeinkommen.de"
-                    }
-                 },
-                 {
-                    "sys": {
-                       "space": {
-                          "sys": {
-                             "type": "Link",
-                             "linkType": "Space",
-                             "id": "thownz9vc5w0"
-                          }
-                       },
-                       "id": "3OUm4GfkIPdFaOa9I6JbJe",
-                       "type": "Entry",
-                       "createdAt": "2020-03-22T19:33:25.138Z",
-                       "updatedAt": "2020-03-22T19:33:25.138Z",
-                       "environment": {
-                          "sys": {
-                             "id": "master",
-                             "type": "Link",
-                             "linkType": "Environment"
-                          }
-                       },
-                       "revision": 1,
-                       "contentType": {
-                          "sys": {
-                             "type": "Link",
-                             "linkType": "ContentType",
-                             "id": "youtube_video"
-                          }
-                       },
-                       "locale": "de-DE"
-                    },
-                    "fields": {
-                       "video_id": "pt-ZHJNm8Qk",
-                       "title": "Dem Grundeinkommensgefühl auf der Spur"
-                    }
-                 },
-                 {
-                    "sys": {
-                       "space": {
-                          "sys": {
-                             "type": "Link",
-                             "linkType": "Space",
-                             "id": "thownz9vc5w0"
-                          }
-                       },
-                       "id": "3rbv9FjqCy6axfiLnw664r",
-                       "type": "Entry",
-                       "createdAt": "2020-03-22T19:35:35.850Z",
-                       "updatedAt": "2020-03-22T19:35:35.850Z",
-                       "environment": {
-                          "sys": {
-                             "id": "master",
-                             "type": "Link",
-                             "linkType": "Environment"
-                          }
-                       },
-                       "revision": 1,
-                       "contentType": {
-                          "sys": {
-                             "type": "Link",
-                             "linkType": "ContentType",
-                             "id": "rich_image"
-                          }
-                       },
-                       "locale": "de-DE"
-                    },
-                    "fields": {
-                       "image": {
-                          "sys": {
-                             "type": "Link",
-                             "linkType": "Asset",
-                             "id": "1X69ZIKykM0cysGIMooweU"
-                          }
-                       },
-                       "position": "Vollbild"
-                    }
-                 },
-                 {
-                    "sys": {
-                       "space": {
-                          "sys": {
-                             "type": "Link",
-                             "linkType": "Space",
-                             "id": "thownz9vc5w0"
-                          }
-                       },
-                       "id": "51TZUB6OqswsyQAu2g04ME",
-                       "type": "Entry",
-                       "createdAt": "2016-12-17T13:14:23.511Z",
-                       "updatedAt": "2016-12-17T13:14:23.511Z",
-                       "environment": {
-                          "sys": {
-                             "id": "master",
-                             "type": "Link",
-                             "linkType": "Environment"
-                          }
-                       },
-                       "revision": 1,
-                       "contentType": {
-                          "sys": {
-                             "type": "Link",
-                             "linkType": "ContentType",
-                             "id": "category"
-                          }
-                       },
-                       "locale": "de-DE"
-                    },
-                    "fields": {
-                       "name": "Gewinner*innen"
-                    }
-                 },
-                 {
-                    "sys": {
-                       "space": {
-                          "sys": {
-                             "type": "Link",
-                             "linkType": "Space",
-                             "id": "thownz9vc5w0"
-                          }
-                       },
-                       "id": "5VvsVFgRSWblIs4TJmD0fP",
-                       "type": "Entry",
-                       "createdAt": "2020-03-22T19:34:22.142Z",
-                       "updatedAt": "2020-03-22T19:34:22.142Z",
-                       "environment": {
-                          "sys": {
-                             "id": "master",
-                             "type": "Link",
-                             "linkType": "Environment"
-                          }
-                       },
-                       "revision": 1,
-                       "contentType": {
-                          "sys": {
-                             "type": "Link",
-                             "linkType": "ContentType",
-                             "id": "rich_image"
-                          }
-                       },
-                       "locale": "de-DE"
-                    },
-                    "fields": {
-                       "image": {
-                          "sys": {
-                             "type": "Link",
-                             "linkType": "Asset",
-                             "id": "4UKPR89IKskq8WCwa0GYeQ"
-                          }
-                       },
-                       "position": "Vollbild"
-                    }
-                 },
-                 {
-                    "sys": {
-                       "space": {
-                          "sys": {
-                             "type": "Link",
-                             "linkType": "Space",
-                             "id": "thownz9vc5w0"
-                          }
-                       },
-                       "id": "5wHn2CwcVcFCgBORceLHnP",
-                       "type": "Entry",
-                       "createdAt": "2020-03-22T19:35:04.611Z",
-                       "updatedAt": "2020-03-22T19:35:04.611Z",
-                       "environment": {
-                          "sys": {
-                             "id": "master",
-                             "type": "Link",
-                             "linkType": "Environment"
-                          }
-                       },
-                       "revision": 1,
-                       "contentType": {
-                          "sys": {
-                             "type": "Link",
-                             "linkType": "ContentType",
-                             "id": "rich_image"
-                          }
-                       },
-                       "locale": "de-DE"
-                    },
-                    "fields": {
-                       "image": {
-                          "sys": {
-                             "type": "Link",
-                             "linkType": "Asset",
-                             "id": "4Z0VWwW4sEywcCWWgOOsIm"
-                          }
-                       },
-                       "position": "Vollbild"
-                    }
-                 },
-                 {
-                    "sys": {
-                       "space": {
-                          "sys": {
-                             "type": "Link",
-                             "linkType": "Space",
-                             "id": "thownz9vc5w0"
-                          }
-                       },
-                       "id": "Xok5X2ySTCleJIVP6lDER",
-                       "type": "Entry",
-                       "createdAt": "2020-03-22T19:36:10.197Z",
-                       "updatedAt": "2020-03-22T19:36:10.197Z",
-                       "environment": {
-                          "sys": {
-                             "id": "master",
-                             "type": "Link",
-                             "linkType": "Environment"
-                          }
-                       },
-                       "revision": 1,
-                       "contentType": {
-                          "sys": {
-                             "type": "Link",
-                             "linkType": "ContentType",
-                             "id": "rich_image"
-                          }
-                       },
-                       "locale": "de-DE"
-                    },
-                    "fields": {
-                       "image": {
-                          "sys": {
-                             "type": "Link",
-                             "linkType": "Asset",
-                             "id": "6TAvslihQQwEQ0gycyu4yo"
-                          }
-                       },
-                       "position": "Vollbild"
-                    }
-                 },
-                 {
-                    "sys": {
-                       "space": {
-                          "sys": {
-                             "type": "Link",
-                             "linkType": "Space",
-                             "id": "thownz9vc5w0"
-                          }
-                       },
-                       "id": "vGienFOrtIM8G8IAo2uuA",
-                       "type": "Entry",
-                       "createdAt": "2017-10-24T18:14:12.100Z",
-                       "updatedAt": "2020-03-22T19:37:18.419Z",
-                       "environment": {
-                          "sys": {
-                             "id": "master",
-                             "type": "Link",
-                             "linkType": "Environment"
-                          }
-                       },
-                       "revision": 13,
-                       "contentType": {
-                          "sys": {
-                             "type": "Link",
-                             "linkType": "ContentType",
-                             "id": "news"
-                          }
-                       },
-                       "locale": "de-DE"
-                    },
-                    "fields": {
-                       "title": "Das Grundeinkommensgefühl",
-                       "slug": "grundeinkommensgefühl-2017",
-                       "date": "2017-10-24T00:00+02:00",
-                       "author": {
-                          "sys": {
-                             "type": "Link",
-                             "linkType": "Entry",
-                             "id": "29OfZHKGSQsmaGMIyo6QUK"
-                          }
-                       },
-                       "headerImage": {
-                          "sys": {
-                             "type": "Link",
-                             "linkType": "Asset",
-                             "id": "iHd92gq3leIKUsWiEMEyu"
-                          }
-                       },
-                       "rich_text": {
-                          "data": {},
-                          "content": [
-                             {
-                                "data": {},
-                                "content": [
-                                   {
-                                      "data": {},
-                                      "marks": [],
-                                      "value": "Steuermodelle, Auswirkungen auf den Arbeitsmarkt und Sozialleistungen\n- die Öffentlichkeit diskutiert wie wild über das Grundeinkommen. Aber\neine entscheidende Perspektive fehlt: Wie fühlt es sich an, so ein Grundeinkommen\nzu erhalten? Wir haben unsere Gewinner*innen eingeladen und sie gefragt.",
-                                      "nodeType": "text"
-                                   }
-                                ],
-                                "nodeType": "paragraph"
-                             },
-                             {
-                                "data": {},
-                                "content": [
-                                   {
-                                      "data": {},
-                                      "marks": [],
-                                      "value": "Die fehlende Perspektive",
-                                      "nodeType": "text"
-                                   }
-                                ],
-                                "nodeType": "heading-3"
-                             },
-                             {
-                                "data": {},
-                                "content": [
-                                   {
-                                      "data": {},
-                                      "marks": [],
-                                      "value": "Das Bedingungslose Grundeinkommen ist in der Mitte der Gesellschaft\nangekommen.",
-                                      "nodeType": "text"
-                                   },
-                                   {
-                                      "data": {
-                                         "uri": "https://www.mein-grundeinkommen.de/news/35KJ62FI7SuyCeqs2oqyEc"
-                                      },
-                                      "content": [
-                                         {
-                                            "data": {},
-                                            "marks": [],
-                                            "value": "Zwei Drittel der Bevölkerung befürworten es",
-                                            "nodeType": "text"
-                                         }
-                                      ],
-                                      "nodeType": "hyperlink"
-                                   },
-                                   {
-                                      "data": {},
-                                      "marks": [],
-                                      "value": ", ebenso einige bekannte Konzernchef*innen, Philosoph*innen und\nParteivorsitzende. Dieser rasante Aufstieg einer politischen Idee hat\ngute Gründe: Der bisherige Sozialstaat wirkt wenig zukunftsfähig, die\nDigitalisierung verändert die Welt massiv, die junge Generation hat\nneue Erwartungen ans Erwerbsleben, große Teile der Bevölkerung stehen\nvor dem Burnout und sehnen sich nach anderen Perspektiven.",
-                                      "nodeType": "text"
-                                   }
-                                ],
-                                "nodeType": "paragraph"
-                             },
-                             {
-                                "data": {},
-                                "content": [
-                                   {
-                                      "data": {},
-                                      "marks": [],
-                                      "value": "Neuerdings wird also in den Kolumnen gestritten: Wie hoch muss\nein Grundeinkommen sein? Wird es eine Inflation geben? Welches Modell\nist das fairste? Wie wird sich der Arbeitsmarkt verändern?",
-                                      "nodeType": "text"
-                                   }
-                                ],
-                                "nodeType": "paragraph"
-                             },
-                             {
-                                "data": {},
-                                "content": [
-                                   {
-                                      "data": {},
-                                      "marks": [],
-                                      "value": "Ich glaube, dass neben diesen Fragen eine entscheidende Perspektive\nfehlt. Eine Perspektive, die das Grundeinkommen überhaupt erst so mächtig\nund populär macht: Das Gefühl.",
-                                      "nodeType": "text"
-                                   }
-                                ],
-                                "nodeType": "paragraph"
-                             },
-                             {
-                                "data": {},
-                                "content": [
-                                   {
-                                      "data": {},
-                                      "marks": [],
-                                      "value": "Grundeinkommen ist nämlich nicht einfach eine weitere sozialpolitische\nMaßnahme, bei der es ausreicht, quantitative Vor- und Nachteile zu kalkulieren.\nGrundeinkommen ist Ausdruck eines fundamental neuen Paradigmas. In unserer\narbeitsteiligen Gesellschaft brauchen Menschen Geld zum Überleben. Und\neine Grundeinkommensgesellschaft gibt es ihnen einfach, jeden Monat\nneu, ohne Rückfragen, bedingungslos, einfach so, weil sie Menschen sind.\nDas Grundeinkommen sagt mir jeden Monat: Du bist okay, du darfst sein,\nwir glauben an dich, wir vertrauen dir. Das ist etwas ganz Neues! Das\nwird uns verändern - von innen!",
-                                      "nodeType": "text"
-                                   }
-                                ],
-                                "nodeType": "paragraph"
-                             },
-                             {
-                                "data": {},
-                                "content": [
-                                   {
-                                      "data": {},
-                                      "marks": [],
-                                      "value": "Und wie?",
-                                      "nodeType": "text"
-                                   }
-                                ],
-                                "nodeType": "paragraph"
-                             },
-                             {
-                                "data": {},
-                                "content": [
-                                   {
-                                      "data": {},
-                                      "marks": [],
-                                      "value": "Das berichten die Gewinner*innen!",
-                                      "nodeType": "text"
-                                   }
-                                ],
-                                "nodeType": "heading-3"
-                             },
-                             {
-                                "data": {},
-                                "content": [
-                                   {
-                                      "data": {},
-                                      "marks": [],
-                                      "value": "Schon mehr als 100 Menschen haben die Erfahrung gemacht. Was können\nwir von ihnen lernen? In der letzten Woche haben wir alle Grundeinkommens-Gewinner*innen\nnach Hamburg eingeladen, um mit ihnen darüber zu sprechen, was sich\ndenn nun wirklich bei ihnen verändert hat und ob es so ein Grundeinkommensgefühl\ntatsächlich gibt.",
-                                      "nodeType": "text"
-                                   }
-                                ],
-                                "nodeType": "paragraph"
-                             },
-                             {
-                                "data": {
-                                   "target": {
-                                      "sys": {
-                                         "id": "3OUm4GfkIPdFaOa9I6JbJe",
-                                         "type": "Link",
-                                         "linkType": "Entry"
-                                      }
-                                   }
-                                },
-                                "content": [],
-                                "nodeType": "embedded-entry-block"
-                             },
-                             {
-                                "data": {},
-                                "content": [
-                                   {
-                                      "data": {},
-                                      "marks": [
-                                         {
-                                            "type": "bold"
-                                         }
-                                      ],
-                                      "value": "Christoph kündigt im Callcenter",
-                                      "nodeType": "text"
-                                   },
-                                   {
-                                      "data": {},
-                                      "marks": [],
-                                      "value": "\nDa ist zum Beispiel Christoph, einer der ersten Gewinner. Er verhielt sich so, wie es viele befürchten, sollte Grundeinkommen eingeführt werden. Kurz nachdem die ersten 1.000 Euro auf seinem Konto eintrafen, kündigte er seinen Job im Callcenter. Er fühlte sich plötzlich “frei, leicht und entspannt”.",
-                                      "nodeType": "text"
-                                   }
-                                ],
-                                "nodeType": "paragraph"
-                             },
-                             {
-                                "data": {},
-                                "content": [
-                                   {
-                                      "data": {},
-                                      "marks": [],
-                                      "value": "Bei Christoph hat sich aber noch mehr verändert. Durch das Grundeinkommen\nkonnte er ein Pädagogik-Studium beginnen. So wurde seine Freundin plötzlich\nzur Hauptverdienerin in der Familie. In Hamburg berichtete mir Christoph\nganz nebenbei und selbstverständlich: \"Natürlich mach ich den Abwasch\nzu Hause.“ Das zeigt: Wo Grundeinkommen hinkommt, entsteht neuer Verhandlungsspielraum,\nder auch dazu führen kann verkrustete Lebensweisen zu verändern.",
-                                      "nodeType": "text"
-                                   }
-                                ],
-                                "nodeType": "paragraph"
-                             },
-                             {
-                                "data": {},
-                                "content": [
-                                   {
-                                      "data": {},
-                                      "marks": [],
-                                      "value": "Es haben übrigens neben Christoph nur weitere 4 von 112 Gewinnern\nihren Job gekündigt. Alle arbeiten in anderen Jobs weiter oder haben\nsich selbstständig gemacht.",
-                                      "nodeType": "text"
-                                   }
-                                ],
-                                "nodeType": "paragraph"
-                             },
-                             {
-                                "data": {
-                                   "target": {
-                                      "sys": {
-                                         "id": "5VvsVFgRSWblIs4TJmD0fP",
-                                         "type": "Link",
-                                         "linkType": "Entry"
-                                      }
-                                   }
-                                },
-                                "content": [],
-                                "nodeType": "embedded-entry-block"
-                             },
-                             {
-                                "data": {},
-                                "content": [
-                                   {
-                                      "data": {},
-                                      "marks": [
-                                         {
-                                            "type": "bold"
-                                         }
-                                      ],
-                                      "value": "Robins Familie verhandelt die Machtfrage",
-                                      "nodeType": "text"
-                                   },
-                                   {
-                                      "data": {},
-                                      "marks": [],
-                                      "value": "\nRobin war 8 Jahre alt, als er gewann. Doch wer würde das Geld verwalten? Er selbst? Dann hätte er möglicherweise mehr Geld in der Tasche als seine Eltern. Oder seine Eltern? Die dann sagen könnten: „Du bekommst dein Grundeinkommen erst, wenn du dein Zimmer aufräumst.“",
-                                      "nodeType": "text"
-                                   }
-                                ],
-                                "nodeType": "paragraph"
-                             },
-                             {
-                                "data": {},
-                                "content": [
-                                   {
-                                      "data": {},
-                                      "marks": [],
-                                      "value": "Die Familie konnte nicht anders als sich mit diesen Fragen auseinanderzusetzen.\nDas zeigt: Wo Grundeinkommen hinkommt, wird automatisch die Machtfrage\nneu gestellt und man kann sich ihr nicht entziehen. Robin teilte sein\nGeld übrigens bereitwillig mit der ganzen Familie, die seither enger\nzusammengerückt ist.",
-                                      "nodeType": "text"
-                                   }
-                                ],
-                                "nodeType": "paragraph"
-                             },
-                             {
-                                "data": {
-                                   "target": {
-                                      "sys": {
-                                         "id": "5wHn2CwcVcFCgBORceLHnP",
-                                         "type": "Link",
-                                         "linkType": "Entry"
-                                      }
-                                   }
-                                },
-                                "content": [],
-                                "nodeType": "embedded-entry-block"
-                             },
-                             {
-                                "data": {},
-                                "content": [
-                                   {
-                                      "data": {},
-                                      "marks": [
-                                         {
-                                            "type": "bold"
-                                         }
-                                      ],
-                                      "value": "Marcs chronische Krankheit ist plötzlich symptomfrei",
-                                      "nodeType": "text"
-                                   },
-                                   {
-                                      "data": {},
-                                      "marks": [],
-                                      "value": "\nMarc hat, wie rund 300.000 andere Deutsche, die Darmkrankheit Morbus Crohn. Es traten immer dann neue Schübe auf, wenn er sich mit verschiedenen Behörden um die Zahlungen zu seinem Lebensunterhalt streiten musste. Seitdem Marc sein Grundeinkommen bedingungslos erhielt, kamen plötzlich keine Schübe mehr. Zum ersten Mal seit zehn Jahren konnte er seine Medikamente absetzen. Die Existenzangst war plötzlich weg.",
-                                      "nodeType": "text"
-                                   }
-                                ],
-                                "nodeType": "paragraph"
-                             },
-                             {
-                                "data": {},
-                                "content": [
-                                   {
-                                      "data": {},
-                                      "marks": [],
-                                      "value": "Ähnliche Effekte berichten fast alle Gewinner*innen. Sie schlafen\nbesser seitdem sie bedingungslos abgesichert sind. Angestellte berichten\nzudem, dass sie nun mehr arbeiten, aber dabei viel weniger gestresst\nsind. Stress und Krankheiten kommen eben häufig nicht von den langen\nTo-do-Listen, sondern von den dahinterstehenden Sorgen, was passiert,\nwenn man die To-do-Liste nicht schafft.",
-                                      "nodeType": "text"
-                                   }
-                                ],
-                                "nodeType": "paragraph"
-                             },
-                             {
-                                "data": {
-                                   "target": {
-                                      "sys": {
-                                         "id": "3rbv9FjqCy6axfiLnw664r",
-                                         "type": "Link",
-                                         "linkType": "Entry"
-                                      }
-                                   }
-                                },
-                                "content": [],
-                                "nodeType": "embedded-entry-block"
-                             },
-                             {
-                                "data": {},
-                                "content": [
-                                   {
-                                      "data": {},
-                                      "marks": [
-                                         {
-                                            "type": "bold"
-                                         }
-                                      ],
-                                      "value": "Jesta wagt ein Geschäftsexperiment",
-                                      "nodeType": "text"
-                                   },
-                                   {
-                                      "data": {},
-                                      "marks": [],
-                                      "value": "\nVier Grundeinkommensgewinner*innen haben sich während ihres Jahres selbstständig gemacht und zahlreiche weitere weitergebildet, weil nun das Geld für neue, mutige Schritte da war.",
-                                      "nodeType": "text"
-                                   }
-                                ],
-                                "nodeType": "paragraph"
-                             },
-                             {
-                                "data": {},
-                                "content": [
-                                   {
-                                      "data": {},
-                                      "marks": [],
-                                      "value": "Jesta ging aber noch weiter: In ihrer Coaching-Tätigkeit startete\nsie, mit dem Grundeinkommen im Rücken, ein Experiment: Ihre Kund*innen\nkonnten fortan bezahlen soviel sie wollten.",
-                                      "nodeType": "text"
-                                   }
-                                ],
-                                "nodeType": "paragraph"
-                             },
-                             {
-                                "data": {},
-                                "content": [
-                                   {
-                                      "data": {},
-                                      "marks": [],
-                                      "value": "Hier zeigt sich, wie ein Grundeinkommen seine Wirkung potenzieren\nkönnte. Nicht nur verändert sich etwas im eigenen Leben, in der eigenen\nGesundheit und im nahen Umfeld. Wenn ich keine Existenzangst mehr haben\nmuss, dann kann ich auch anderen viel mehr vertrauen - daraus könnten\nsich ganz neue Geschäftspraktiken und -modelle entwickeln.",
-                                      "nodeType": "text"
-                                   }
-                                ],
-                                "nodeType": "paragraph"
-                             },
-                             {
-                                "data": {
-                                   "target": {
-                                      "sys": {
-                                         "id": "Xok5X2ySTCleJIVP6lDER",
-                                         "type": "Link",
-                                         "linkType": "Entry"
-                                      }
-                                   }
-                                },
-                                "content": [],
-                                "nodeType": "embedded-entry-block"
-                             },
-                             {
-                                "data": {},
-                                "content": [
-                                   {
-                                      "data": {},
-                                      "marks": [
-                                         {
-                                            "type": "bold"
-                                         }
-                                      ],
-                                      "value": "Für Astrid wird Unmögliches denkbar",
-                                      "nodeType": "text"
-                                   },
-                                   {
-                                      "data": {},
-                                      "marks": [],
-                                      "value": "\nDie für mich beeindruckendste Geschichte ist die von Astrid. Sie zeigt, wie sehr die neue Bedingungslosigkeit die Brille verändern kann, durch die man die Welt sieht. Denn für Astrid waren Geld und Konsum auf einmal gar nicht mehr so wichtig, weil es ja keinen Mangel mehr gab. Plötzlich wurden Dinge denkbar, die früher nicht denkbar waren, wie z.B. kein Auto zu besitzen oder mit Anfang 50 nochmal in eine WG zu ziehen.",
-                                      "nodeType": "text"
-                                   }
-                                ],
-                                "nodeType": "paragraph"
-                             },
-                             {
-                                "data": {
-                                   "target": {
-                                      "sys": {
-                                         "id": "x8biCspvW8GhebsZTTEWb",
-                                         "type": "Link",
-                                         "linkType": "Entry"
-                                      }
-                                   }
-                                },
-                                "content": [],
-                                "nodeType": "embedded-entry-block"
-                             },
-                             {
-                                "data": {},
-                                "content": [
-                                   {
-                                      "data": {},
-                                      "marks": [],
-                                      "value": "Das Grundeinkommen ist nicht die Antwort, sondern stellt die richtigen\nFragen",
-                                      "nodeType": "text"
-                                   }
-                                ],
-                                "nodeType": "heading-3"
-                             },
-                             {
-                                "data": {},
-                                "content": [
-                                   {
-                                      "data": {},
-                                      "marks": [],
-                                      "value": "Auch vergangene Woche in Hamburg berichteten fast alle Gewinner*innen:\nMit Grundeinkommen hat sich oft auf dem Papier nicht viel geändert,\naber dafür die Haltung zum Leben selbst. Die Bedingungslosigkeit wurde\ndabei als monatlicher Vertrauensvorschuss empfunden, der die Gewinner*innen\nmotiviert hat. Es setzt ein „Om-Gefühl“ ein, eine neue Ruhe, die dafür\nsorgt, dass die wirklich wichtigen Dinge mehr Beachtung bekommen. Viele\nhatten sich auch vorher schon ein anderes, bewussteres, stressfreieres\nLeben gewünscht – aber erst Grundeinkommen hat ihnen geholfen, es zu\nleben.",
-                                      "nodeType": "text"
-                                   }
-                                ],
-                                "nodeType": "paragraph"
-                             },
-                             {
-                                "data": {},
-                                "content": [
-                                   {
-                                      "data": {},
-                                      "marks": [],
-                                      "value": "Der Austausch mit den Gewinner*innen hat mir verdeutlicht, warum\nGrundeinkommen so einen radikal anderen Ansatz zum Status Quo darstellt.\nEs fordert uns heraus, ohne uns etwas aufzuzwingen. Die Gewinner*innen\nsagten einstimmig: diese Herausforderung fühlt sich mächtig an und macht\nSpaß! Grundeinkommen löst Gefühle aus, die das Potential haben, tiefgreifende\nVeränderung zu bewirken. In uns selbst, in unseren Beziehungen, in unserer\nArbeit. Warum also nicht auch für unser gesellschaftliches Zusammenleben?",
-                                      "nodeType": "text"
-                                   }
-                                ],
-                                "nodeType": "paragraph"
-                             }
-                          ],
-                          "nodeType": "document"
-                       },
-                       "category": {
-                          "sys": {
-                             "type": "Link",
-                             "linkType": "Entry",
-                             "id": "51TZUB6OqswsyQAu2g04ME"
-                          }
-                       },
-                       "migrationStatus": "Fertig migriert (keine Probleme)"
-                    }
-                 },
-                 {
-                    "sys": {
-                       "space": {
-                          "sys": {
-                             "type": "Link",
-                             "linkType": "Space",
-                             "id": "thownz9vc5w0"
-                          }
-                       },
-                       "id": "x8biCspvW8GhebsZTTEWb",
-                       "type": "Entry",
-                       "createdAt": "2020-03-22T19:36:56.456Z",
-                       "updatedAt": "2020-03-22T19:36:56.456Z",
-                       "environment": {
-                          "sys": {
-                             "id": "master",
-                             "type": "Link",
-                             "linkType": "Environment"
-                          }
-                       },
-                       "revision": 1,
-                       "contentType": {
-                          "sys": {
-                             "type": "Link",
-                             "linkType": "ContentType",
-                             "id": "rich_image"
-                          }
-                       },
-                       "locale": "de-DE"
-                    },
-                    "fields": {
-                       "image": {
-                          "sys": {
-                             "type": "Link",
-                             "linkType": "Asset",
-                             "id": "7thHV0aTXqwYU8YUemUKOa"
-                          }
-                       },
-                       "position": "Vollbild"
-                    }
-                 }
-              ],
-              "Asset": [
-                 {
-                    "sys": {
-                       "space": {
-                          "sys": {
-                             "type": "Link",
-                             "linkType": "Space",
-                             "id": "thownz9vc5w0"
-                          }
-                       },
-                       "id": "1X69ZIKykM0cysGIMooweU",
-                       "type": "Asset",
-                       "createdAt": "2017-10-24T16:37:51.214Z",
-                       "updatedAt": "2017-10-24T16:37:51.214Z",
-                       "environment": {
-                          "sys": {
-                             "id": "master",
-                             "type": "Link",
-                             "linkType": "Environment"
-                          }
-                       },
-                       "revision": 1,
-                       "locale": "de-DE"
-                    },
-                    "fields": {
-                       "title": "Mark-06",
-                       "file": {
-                          "url": "//images.ctfassets.net/thownz9vc5w0/1X69ZIKykM0cysGIMooweU/19d1bf2a520657aad7cd44d839ad1ed2/Mark-06.jpg",
-                          "details": {
-                             "size": 317792,
-                             "image": {
-                                "width": 1200,
-                                "height": 675
-                             }
-                          },
-                          "fileName": "Mark-06.jpg",
-                          "contentType": "image/jpeg"
-                       }
-                    }
-                 },
-                 {
-                    "sys": {
-                       "space": {
-                          "sys": {
-                             "type": "Link",
-                             "linkType": "Space",
-                             "id": "thownz9vc5w0"
-                          }
-                       },
-                       "id": "4UKPR89IKskq8WCwa0GYeQ",
-                       "type": "Asset",
-                       "createdAt": "2017-10-24T16:39:14.781Z",
-                       "updatedAt": "2017-10-24T16:39:14.781Z",
-                       "environment": {
-                          "sys": {
-                             "id": "master",
-                             "type": "Link",
-                             "linkType": "Environment"
-                          }
-                       },
-                       "revision": 1,
-                       "locale": "de-DE"
-                    },
-                    "fields": {
-                       "title": "BGE Christoph",
-                       "file": {
-                          "url": "//images.ctfassets.net/thownz9vc5w0/4UKPR89IKskq8WCwa0GYeQ/f7a43b1f7cb86653c543cfa12ade5ad1/Bildschirmfoto_2017-10-24_um_12.59.32.png",
-                          "details": {
-                             "size": 962628,
-                             "image": {
-                                "width": 1200,
-                                "height": 675
-                             }
-                          },
-                          "fileName": "Bildschirmfoto 2017-10-24 um 12.59.32.png",
-                          "contentType": "image/png"
-                       }
-                    }
-                 },
-                 {
-                    "sys": {
-                       "space": {
-                          "sys": {
-                             "type": "Link",
-                             "linkType": "Space",
-                             "id": "thownz9vc5w0"
-                          }
-                       },
-                       "id": "4Z0VWwW4sEywcCWWgOOsIm",
-                       "type": "Asset",
-                       "createdAt": "2017-10-24T16:39:52.456Z",
-                       "updatedAt": "2017-10-24T16:39:52.456Z",
-                       "environment": {
-                          "sys": {
-                             "id": "master",
-                             "type": "Link",
-                             "linkType": "Environment"
-                          }
-                       },
-                       "revision": 1,
-                       "locale": "de-DE"
-                    },
-                    "fields": {
-                       "title": "BGE-OlgaRobin-12",
-                       "file": {
-                          "url": "//images.ctfassets.net/thownz9vc5w0/4Z0VWwW4sEywcCWWgOOsIm/7464916a6a5d4345287479ef96ca3336/BGE-OlgaRobin-12.jpg",
-                          "details": {
-                             "size": 507996,
-                             "image": {
-                                "width": 1200,
-                                "height": 675
-                             }
-                          },
-                          "fileName": "BGE-OlgaRobin-12.jpg",
-                          "contentType": "image/jpeg"
-                       }
-                    }
-                 },
-                 {
-                    "sys": {
-                       "space": {
-                          "sys": {
-                             "type": "Link",
-                             "linkType": "Space",
-                             "id": "thownz9vc5w0"
-                          }
-                       },
-                       "id": "5AGBz5Aqm4ImSQAs2mIOIO",
-                       "type": "Asset",
-                       "createdAt": "2017-02-01T14:16:12.620Z",
-                       "updatedAt": "2017-02-01T14:17:04.804Z",
-                       "environment": {
-                          "sys": {
-                             "id": "master",
-                             "type": "Link",
-                             "linkType": "Environment"
-                          }
-                       },
-                       "revision": 2,
-                       "locale": "de-DE"
-                    },
-                    "fields": {
-                       "title": "Jesta",
-                       "file": {
-                          "url": "//images.ctfassets.net/thownz9vc5w0/5AGBz5Aqm4ImSQAs2mIOIO/cf311bbd2216d077aadf69ca971be9b1/98blog-1024x604.jpg",
-                          "details": {
-                             "size": 457540,
-                             "image": {
-                                "width": 1200,
-                                "height": 675
-                             }
-                          },
-                          "fileName": "98blog-1024x604.jpg",
-                          "contentType": "image/jpeg"
-                       }
-                    }
-                 },
-                 {
-                    "sys": {
-                       "space": {
-                          "sys": {
-                             "type": "Link",
-                             "linkType": "Space",
-                             "id": "thownz9vc5w0"
-                          }
-                       },
-                       "id": "5qabJquRheIOMqCGAcKWwe",
-                       "type": "Asset",
-                       "createdAt": "2017-01-23T00:54:15.930Z",
-                       "updatedAt": "2020-03-17T10:36:41.910Z",
-                       "environment": {
-                          "sys": {
-                             "id": "master",
-                             "type": "Link",
-                             "linkType": "Environment"
-                          }
-                       },
-                       "revision": 5,
-                       "locale": "de-DE"
-                    },
-                    "fields": {
-                       "title": "Micha",
-                       "file": {
-                          "url": "//images.ctfassets.net/thownz9vc5w0/5qabJquRheIOMqCGAcKWwe/4349b605644577753f0e573e1fd8936b/Michael_Bohmeyer.jpg",
-                          "details": {
-                             "size": 82482,
-                             "image": {
-                                "width": 300,
-                                "height": 300
-                             }
-                          },
-                          "fileName": "Michael Bohmeyer.jpg",
-                          "contentType": "image/jpeg"
-                       }
-                    }
-                 },
-                 {
-                    "sys": {
-                       "space": {
-                          "sys": {
-                             "type": "Link",
-                             "linkType": "Space",
-                             "id": "thownz9vc5w0"
-                          }
-                       },
-                       "id": "6TAvslihQQwEQ0gycyu4yo",
-                       "type": "Asset",
-                       "createdAt": "2017-10-24T16:40:52.811Z",
-                       "updatedAt": "2017-10-24T16:40:52.811Z",
-                       "environment": {
-                          "sys": {
-                             "id": "master",
-                             "type": "Link",
-                             "linkType": "Environment"
-                          }
-                       },
-                       "revision": 1,
-                       "locale": "de-DE"
-                    },
-                    "fields": {
-                       "title": "JestaPhoenix2",
-                       "file": {
-                          "url": "//images.ctfassets.net/thownz9vc5w0/6TAvslihQQwEQ0gycyu4yo/f3b5bddee41ea7551818fc43957b8fb7/JestaPhoenix2.jpg",
-                          "details": {
-                             "size": 407721,
-                             "image": {
-                                "width": 1200,
-                                "height": 675
-                             }
-                          },
-                          "fileName": "JestaPhoenix2.jpg",
-                          "contentType": "image/jpeg"
-                       }
-                    }
-                 },
-                 {
-                    "sys": {
-                       "space": {
-                          "sys": {
-                             "type": "Link",
-                             "linkType": "Space",
-                             "id": "thownz9vc5w0"
-                          }
-                       },
-                       "id": "73HeCUD0Ry8Ai0EW4gcWMK",
-                       "type": "Asset",
-                       "createdAt": "2017-01-23T00:53:36.554Z",
-                       "updatedAt": "2017-01-23T00:53:45.344Z",
-                       "environment": {
-                          "sys": {
-                             "id": "master",
-                             "type": "Link",
-                             "linkType": "Environment"
-                          }
-                       },
-                       "revision": 2,
-                       "locale": "de-DE"
-                    },
-                    "fields": {
-                       "title": "Maheba",
-                       "file": {
-                          "url": "//images.ctfassets.net/thownz9vc5w0/73HeCUD0Ry8Ai0EW4gcWMK/f62e392fddc54975870f25b7230ef37a/maheba_fdbiphyq.png",
-                          "details": {
-                             "size": 101060,
-                             "image": {
-                                "width": 300,
-                                "height": 300
-                             }
-                          },
-                          "fileName": "maheba_fdbiphyq.png",
-                          "contentType": "image/png"
-                       }
-                    }
-                 },
-                 {
-                    "sys": {
-                       "space": {
-                          "sys": {
-                             "type": "Link",
-                             "linkType": "Space",
-                             "id": "thownz9vc5w0"
-                          }
-                       },
-                       "id": "7thHV0aTXqwYU8YUemUKOa",
-                       "type": "Asset",
-                       "createdAt": "2017-10-24T16:38:32.325Z",
-                       "updatedAt": "2017-10-24T16:38:32.325Z",
-                       "environment": {
-                          "sys": {
-                             "id": "master",
-                             "type": "Link",
-                             "linkType": "Environment"
-                          }
-                       },
-                       "revision": 1,
-                       "locale": "de-DE"
-                    },
-                    "fields": {
-                       "title": "BGE-Astrid-27",
-                       "file": {
-                          "url": "//images.ctfassets.net/thownz9vc5w0/7thHV0aTXqwYU8YUemUKOa/6c2d61c400af0d48cd7a6a3866e01176/BGE-Astrid-27.jpg",
-                          "details": {
-                             "size": 502898,
-                             "image": {
-                                "width": 1200,
-                                "height": 675
-                             }
-                          },
-                          "fileName": "BGE-Astrid-27.jpg",
-                          "contentType": "image/jpeg"
-                       }
-                    }
-                 },
-                 {
-                    "sys": {
-                       "space": {
-                          "sys": {
-                             "type": "Link",
-                             "linkType": "Space",
-                             "id": "thownz9vc5w0"
-                          }
-                       },
-                       "id": "iHd92gq3leIKUsWiEMEyu",
-                       "type": "Asset",
-                       "createdAt": "2017-10-24T18:36:29.963Z",
-                       "updatedAt": "2017-10-24T18:36:29.964Z",
-                       "environment": {
-                          "sys": {
-                             "id": "master",
-                             "type": "Link",
-                             "linkType": "Environment"
-                          }
-                       },
-                       "revision": 1,
-                       "locale": "de-DE"
-                    },
-                    "fields": {
-                       "title": "Titelbild_Gefühl",
-                       "file": {
-                          "url": "//images.ctfassets.net/thownz9vc5w0/iHd92gq3leIKUsWiEMEyu/bf3e731f49c7c2ff0c43e07c0f29f941/Bildschirmfoto_2017-10-24_um_18.17.39__1_.png",
-                          "details": {
-                             "size": 958730,
-                             "image": {
-                                "width": 1200,
-                                "height": 675
-                             }
-                          },
-                          "fileName": "Bildschirmfoto 2017-10-24 um 18.17.39 (1).png",
-                          "contentType": "image/png"
-                       }
-                    }
-                 }
-              ]
-           }
-        }
+          "sys": {
+            "type": "Array"
+          },
+          "total": 1,
+          "skip": 0,
+          "limit": 1,
+          "items": [
+            {
+               "sys": {
+                  "space": {
+                     "sys": {
+                        "type": "Link",
+                        "linkType": "Space",
+                        "id": "thownz9vc5w0"
+                     }
+                  },
+                  "id": "5dtrVVJefeyCoaMugqoUUk",
+                  "type": "Entry",
+                  "createdAt": "2017-01-15T12:01:20.725Z",
+                  "updatedAt": "2020-05-19T12:00:42.246Z",
+                  "environment": {
+                     "sys": {
+                        "id": "master",
+                        "type": "Link",
+                        "linkType": "Environment"
+                     }
+                  },
+                  "revision": 14,
+                  "contentType": {
+                     "sys": {
+                        "type": "Link",
+                        "linkType": "ContentType",
+                        "id": "winner"
+                     }
+                  },
+                  "locale": "de-DE"
+               },
+               "fields": {
+                  "nickname": " Jesta",
+                  "biOrdinal": 34,
+                  "entrantID": 32878,
+                  "story": " ",
+                  "news": [
+                     {
+                        "sys": {
+                           "type": "Link",
+                           "linkType": "Entry",
+                           "id": "vGienFOrtIM8G8IAo2uuA"
+                        }
+                     },
+                     {
+                        "sys": {
+                           "type": "Link",
+                           "linkType": "Entry",
+                           "id": "1TUjXt07IAMyA0oCmAWyY4"
+                        }
+                     }
+                  ],
+                  "achievement": "realisiert ihre eigene Utopie - sie bietet ihr Slow Business Coaching\nzu einem Offenen Preis an."
+               }
+            }
+          ],
+          "includes": {
+            "Entry": [
+               {
+                  "sys": {
+                     "space": {
+                        "sys": {
+                           "type": "Link",
+                           "linkType": "Space",
+                           "id": "thownz9vc5w0"
+                        }
+                     },
+                     "id": "1TUjXt07IAMyA0oCmAWyY4",
+                     "type": "Entry",
+                     "createdAt": "2017-01-08T13:00:46.564Z",
+                     "updatedAt": "2020-03-17T18:09:28.129Z",
+                     "environment": {
+                        "sys": {
+                           "id": "master",
+                           "type": "Link",
+                           "linkType": "Environment"
+                        }
+                     },
+                     "revision": 20,
+                     "contentType": {
+                        "sys": {
+                           "type": "Link",
+                           "linkType": "ContentType",
+                           "id": "news"
+                        }
+                     },
+                     "locale": "de-DE"
+                  },
+                  "fields": {
+                     "title": "Gewinnerin Jesta plant ihr eigenes BGE-Experiment",
+                     "slug": "gewinnerin-jesta-plant-ihr-eigenes-bge-experiment",
+                     "date": "2016-05-03T00:00+01:00",
+                     "author": {
+                        "sys": {
+                           "type": "Link",
+                           "linkType": "Entry",
+                           "id": "2RbmIbD4k8eOQCEeOCckqi"
+                        }
+                     },
+                     "headerImage": {
+                        "sys": {
+                           "type": "Link",
+                           "linkType": "Asset",
+                           "id": "5AGBz5Aqm4ImSQAs2mIOIO"
+                        }
+                     },
+                     "rich_text": {
+                        "data": {},
+                        "content": [
+                           {
+                              "data": {},
+                              "content": [
+                                 {
+                                    "data": {},
+                                    "marks": [],
+                                    "value": "Ich starre auf mein Handy, wo gerade eine SMS eingegangen ist.\nWäre sie von irgendwem anderen, hätte ich sie inhaltlich sofort als\nSpam gelöscht. Aber sie ist von Greta.",
+                                    "nodeType": "text"
+                                 }
+                              ],
+                              "nodeType": "paragraph"
+                           },
+                           {
+                              "data": {},
+                              "content": [
+                                 {
+                                    "data": {},
+                                    "content": [
+                                       {
+                                          "data": {},
+                                          "marks": [],
+                                          "value": "Uaaaaaa, Jesta! Herzlichen Glückwunsch. Der Michel aus Lönneberga\nhat dich zur Grundeinkommensgewinnerin gemacht.",
+                                          "nodeType": "text"
+                                       }
+                                    ],
+                                    "nodeType": "paragraph"
+                                 },
+                                 {
+                                    "data": {},
+                                    "content": [
+                                       {
+                                          "data": {},
+                                          "marks": [],
+                                          "value": "Ist das ein Witz? Wirklich?",
+                                          "nodeType": "text"
+                                       }
+                                    ],
+                                    "nodeType": "paragraph"
+                                 },
+                                 {
+                                    "data": {},
+                                    "content": [
+                                       {
+                                          "data": {},
+                                          "marks": [],
+                                          "value": "Jaaaa. Es ist wahr!",
+                                          "nodeType": "text"
+                                       }
+                                    ],
+                                    "nodeType": "paragraph"
+                                 },
+                                 {
+                                    "data": {},
+                                    "content": [
+                                       {
+                                          "data": {},
+                                          "marks": [],
+                                          "value": "Oh, mein Gott!!! Ich stehe im Wald. Wirklich. Und heule.",
+                                          "nodeType": "text"
+                                       }
+                                    ],
+                                    "nodeType": "paragraph"
+                                 },
+                                 {
+                                    "data": {},
+                                    "content": [
+                                       {
+                                          "data": {},
+                                          "marks": [],
+                                          "value": "Ich freue mich so für euch!",
+                                          "nodeType": "text"
+                                       }
+                                    ],
+                                    "nodeType": "paragraph"
+                                 }
+                              ],
+                              "nodeType": "blockquote"
+                           },
+                           {
+                              "data": {},
+                              "content": [
+                                 {
+                                    "data": {},
+                                    "marks": [],
+                                    "value": "Dein Thema, es kommt zu dir. Ich stehe im Wald. Wirklich. Auf einer\nkleinen steinernen Brücke – unter mir das Nonnenfließ, wo Biber ihre\nWasserburg errichtet haben. Ich bin unterwegs auf meiner monatlichen\nWandertour auf der 66-Seen-Route um Berlin diesmal zwischen Biesenthal\nund Falkenberg.",
+                                    "nodeType": "text"
+                                 }
+                              ],
+                              "nodeType": "paragraph"
+                           },
+                           {
+                              "data": {},
+                              "content": [
+                                 {
+                                    "data": {},
+                                    "marks": [],
+                                    "value": "Ich setzte mich auf das kleinste Brückengeländer der Welt und schmeiß\nfast mein Handy in die",
+                                    "nodeType": "text"
+                                 },
+                                 {
+                                    "data": {
+                                       "uri": "http://biberburg.es/"
+                                    },
+                                    "content": [
+                                       {
+                                          "data": {},
+                                          "marks": [],
+                                          "value": "Biberburg.Es",
+                                          "nodeType": "text"
+                                       }
+                                    ],
+                                    "nodeType": "hyperlink"
+                                 },
+                                 {
+                                    "data": {},
+                                    "marks": [],
+                                    "value": " rast in mir. Das Blut. Das Adrenalin. Die Gedanken. Die Ideen\nund Möglichkeiten. Und ganz oben schwimmt eigentlich nur eins: Na dann\nlos, dann machst du jetzt dein Experiment. Jetzt probierst du es aus.",
+                                    "nodeType": "text"
+                                 }
+                              ],
+                              "nodeType": "paragraph"
+                           },
+                           {
+                              "data": {},
+                              "content": [
+                                 {
+                                    "data": {},
+                                    "marks": [],
+                                    "value": "Ich versuche meine Frau anzurufen. Die Verbindung ist mies. Es\nhilft nichts, dass ich jetzt laut schluchze beim Reden.",
+                                    "nodeType": "text"
+                                 }
+                              ],
+                              "nodeType": "paragraph"
+                           },
+                           {
+                              "data": {},
+                              "content": [
+                                 {
+                                    "data": {},
+                                    "content": [
+                                       {
+                                          "data": {},
+                                          "marks": [],
+                                          "value": "Ich habe gewonnen…",
+                                          "nodeType": "text"
+                                       }
+                                    ],
+                                    "nodeType": "paragraph"
+                                 },
+                                 {
+                                    "data": {},
+                                    "content": [
+                                       {
+                                          "data": {},
+                                          "marks": [],
+                                          "value": "Was hast du gewonnen?",
+                                          "nodeType": "text"
+                                       }
+                                    ],
+                                    "nodeType": "paragraph"
+                                 },
+                                 {
+                                    "data": {},
+                                    "content": [
+                                       {
+                                          "data": {},
+                                          "marks": [],
+                                          "value": "Das bedingungslose Grundeinkommen.",
+                                          "nodeType": "text"
+                                       }
+                                    ],
+                                    "nodeType": "paragraph"
+                                 },
+                                 {
+                                    "data": {},
+                                    "content": [
+                                       {
+                                          "data": {},
+                                          "marks": [],
+                                          "value": "Wie? Warum hast du das gewonnen?",
+                                          "nodeType": "text"
+                                       }
+                                    ],
+                                    "nodeType": "paragraph"
+                                 },
+                                 {
+                                    "data": {},
+                                    "content": [
+                                       {
+                                          "data": {},
+                                          "marks": [],
+                                          "value": "Ich habe es als Crowdhörnchen unterstützt. Dadurch war ich automatisch\nin jeder Verlosung drin.",
+                                          "nodeType": "text"
+                                       }
+                                    ],
+                                    "nodeType": "paragraph"
+                                 },
+                                 {
+                                    "data": {},
+                                    "content": [
+                                       {
+                                          "data": {},
+                                          "marks": [],
+                                          "value": "Du warst ein was?",
+                                          "nodeType": "text"
+                                       }
+                                    ],
+                                    "nodeType": "paragraph"
+                                 }
+                              ],
+                              "nodeType": "blockquote"
+                           },
+                           {
+                              "data": {},
+                              "content": [
+                                 {
+                                    "data": {},
+                                    "marks": [],
+                                    "value": "Wir verschieben Gespräch auf abends, wo ich ihr das Crowdhörnchen\nerkläre und meine monatliche Unterstützung für das Projekt. Wir trinken\nSekt, ich heule noch ein bisschen und erkläre den Kindern, was Freudentränen\nsind. Unsere Tochter mag es trotzdem nicht, wenn ich weine und stopft\nmir ein Gummibärchen in den Mund. Ich streiche ihr über den Kopf und\ngehe dann nachsehen, warum unser Sohn nichts mehr anhat außer Gummistiefel.\nDas große Feiern mit zwei kleinen Kindern…",
+                                    "nodeType": "text"
+                                 }
+                              ],
+                              "nodeType": "paragraph"
+                           },
+                           {
+                              "data": {},
+                              "content": [
+                                 {
+                                    "data": {},
+                                    "marks": [],
+                                    "value": "Ich glaube an das bedingungslose Grundeinkommen. Bedingungslos.\nIch verfechte es, wo ich kann. Privat als auch in meiner Arbeit.",
+                                    "nodeType": "text"
+                                 }
+                              ],
+                              "nodeType": "paragraph"
+                           },
+                           {
+                              "data": {},
+                              "content": [
+                                 {
+                                    "data": {},
+                                    "marks": [],
+                                    "value": "Ich glaube daran, dass wenn die Existenzangst weg ist, wir zur\nvollen Größe erwachsen und wirklich das in unser Arbeit geben können,\nwas wir in diese Welt träumen möchten, was wir beitragen wollen.",
+                                    "nodeType": "text"
+                                 }
+                              ],
+                              "nodeType": "paragraph"
+                           },
+                           {
+                              "data": {},
+                              "content": [
+                                 {
+                                    "data": {},
+                                    "marks": [],
+                                    "value": "Ich glaube an das glückliche Arbeiten. Nicht als Luxus. Sondern\nals Grundvoraussetzung dafür, dass wir irgendetwas von Wert (er-)schaffen.",
+                                    "nodeType": "text"
+                                 }
+                              ],
+                              "nodeType": "paragraph"
+                           },
+                           {
+                              "data": {},
+                              "content": [
+                                 {
+                                    "data": {},
+                                    "marks": [],
+                                    "value": "Und mit all dem nun also - Vorhang auf für das Ausprobieren meiner\nUtopie. Ich habe schon lange davon geträumt und auch viel davon erzählt,\ndass es mein Ziel ist, irgendwann so arbeiten zu können, dass sich meine\nKlienten selbst aussuchen können, was sie mir zahlen.  Nach unserer\nArbeit zusammen entscheiden sie, was es ihnen wert ist und was sie sich\ninnerhalb ihres Budgets leisten möchten.",
+                                    "nodeType": "text"
+                                 }
+                              ],
+                              "nodeType": "paragraph"
+                           },
+                           {
+                              "data": {},
+                              "content": [
+                                 {
+                                    "data": {},
+                                    "marks": [],
+                                    "value": "Ich arbeite als (Slow) Business Coach und Trainerin für intuitives\nZeitmanagement und zu meinen Hauptklienten gehören Selbstständige, Eltern,\nVisionäre… Die meisten meiner Klienten fallen in mindestens zwei dieser\ndrei Kategorien. Der Zeitpunkt unserer Arbeit zusammen fällt oft auch\nin den Wiedereinstieg nach der Elternzeit, nach einer Auszeit, und auch\nmal nach dem Burn-out. Zeiten in denen Geld nicht unbedingt zu den Hauptressourcen\nzählt.",
+                                    "nodeType": "text"
+                                 }
+                              ],
+                              "nodeType": "paragraph"
+                           },
+                           {
+                              "data": {},
+                              "content": [
+                                 {
+                                    "data": {},
+                                    "marks": [],
+                                    "value": "Ich arbeite zwar schon von Anfang an auch im Tausch und möchte\ndies auch nicht missen. Da aber, meine Vermieter, der Supermarkt, die\nKita meiner Kinder und viele andere meine Dienste nicht im Tausch für\ndas, was ich von ihnen brauche annehmen, kam es auch schon dazu, dass\nich Tauschangebote ablehnen musste.",
+                                    "nodeType": "text"
+                                 }
+                              ],
+                              "nodeType": "paragraph"
+                           },
+                           {
+                              "data": {},
+                              "content": [
+                                 {
+                                    "data": {},
+                                    "marks": [],
+                                    "value": "Das Projekt Offener Preis ist ein Experiment.  Schon aus meiner\nErfahrung mit dem Tauschen weiß ich, dass nicht alles einfach immer\nnur einfach und klar ist.  Daher jetzt meine Utopie als Experiment mit\nder offiziellen Möglichkeit des Scheiterns.",
+                                    "nodeType": "text"
+                                 }
+                              ],
+                              "nodeType": "paragraph"
+                           },
+                           {
+                              "data": {},
+                              "content": [
+                                 {
+                                    "data": {},
+                                    "marks": [],
+                                    "value": "Aber ich will es halt wissen, ob Arbeiten und Bezahlung auch über\nVertrauen läuft. Über Selbsteinschätzung. Kann ich das Ganze überhaupt\nhalten oder kommen mir blöde Gedanken und Gefühle?  Und wenn ja, welche? \nWelche tollen Gefühle kommen? Wie steht es mit der Angst?  Auch wenn\nmeine Existenzangst jetzt für ein Jahr aufgefangen ist – Was ist da\nnoch? Und wie ist das Ganze für meine Klienten? Werden sie die Option\nder eigenen Preisfestlegung wählen oder fühlen sie sich besser den von\nmir genannten Preis zu zahlen? Kommen sie jetzt, weil sie es sich vorher\nnicht leisten konnten? Oder kommen sie jetzt gar nicht, weil es mit\neinem unklaren Gefühl verbunden ist…",
+                                    "nodeType": "text"
+                                 }
+                              ],
+                              "nodeType": "paragraph"
+                           },
+                           {
+                              "data": {},
+                              "content": [
+                                 {
+                                    "data": {},
+                                    "marks": [],
+                                    "value": "Ich weiß es nicht, will’s aber rauskriegen und dokumentieren. Vielleicht\nwird ein Buch draus, vielleicht ein Blog Artikel, vielleicht ein Podcast…",
+                                    "nodeType": "text"
+                                 }
+                              ],
+                              "nodeType": "paragraph"
+                           },
+                           {
+                              "data": {},
+                              "content": [
+                                 {
+                                    "data": {},
+                                    "marks": [],
+                                    "value": "Für mich ist das Jahr bedingungsloses Grundeinkommen ein Stipendium\nfür mein ganz eigenes Forschungsprojekt zum glücklichen Arbeiten. Es\nist Freiheit von Existenzangst durch Grundabsicherung.  Es ist Zeit,\ndie ich diesem Experiment widme. Mit dem bedingungslosen Grundeinkommen,\nkann ich endlich so arbeiten, wie ich es mir wünsche…",
+                                    "nodeType": "text"
+                                 }
+                              ],
+                              "nodeType": "paragraph"
+                           },
+                           {
+                              "data": {},
+                              "content": [
+                                 {
+                                    "data": {},
+                                    "marks": [],
+                                    "value": "Und für diese Freiheit und Möglichkeit danke ich euch allen – allen\nCrowdhörnchen & dem Team des Mein Grundeinkommen, sowie allen anderen\nUnterstützerInnen der Idee selbst!",
+                                    "nodeType": "text"
+                                 }
+                              ],
+                              "nodeType": "paragraph"
+                           },
+                           {
+                              "data": {},
+                              "content": [
+                                 {
+                                    "data": {},
+                                    "marks": [],
+                                    "value": "Habt herzlich liebsten Dank für diese Chance! \n",
+                                    "nodeType": "text"
+                                 },
+                                 {
+                                    "data": {
+                                       "uri": "https://www.mein-grundeinkommen.de/menschen/32878"
+                                    },
+                                    "content": [
+                                       {
+                                          "data": {},
+                                          "marks": [],
+                                          "value": "Jesta",
+                                          "nodeType": "text"
+                                       }
+                                    ],
+                                    "nodeType": "hyperlink"
+                                 },
+                                 {
+                                    "data": {},
+                                    "marks": [],
+                                    "value": "\n",
+                                    "nodeType": "text"
+                                 }
+                              ],
+                              "nodeType": "paragraph"
+                           },
+                           {
+                              "data": {},
+                              "content": [
+                                 {
+                                    "data": {},
+                                    "marks": [],
+                                    "value": "PS: Wie das Experiment selbst läuft, werde ich erst im Nachhinein\nöffentlich machen. Aber wie es ist im Grundeinkommen Jahr zu leben und\nwas dabei sonst noch so rauskommt, werde ich auch vorher schon mal berichten…",
+                                    "nodeType": "text"
+                                 }
+                              ],
+                              "nodeType": "paragraph"
+                           }
+                        ],
+                        "nodeType": "document"
+                     },
+                     "category": {
+                        "sys": {
+                           "type": "Link",
+                           "linkType": "Entry",
+                           "id": "51TZUB6OqswsyQAu2g04ME"
+                        }
+                     },
+                     "categoryName": "Gewinner*innen",
+                     "winners": [
+                        {
+                           "sys": {
+                              "type": "Link",
+                              "linkType": "Entry",
+                              "id": "5dtrVVJefeyCoaMugqoUUk"
+                           }
+                        }
+                     ],
+                     "winnersIds": [
+                        "34"
+                     ],
+                     "wpId": 1310,
+                     "migrationStatus": "Fertig migriert (keine Probleme)"
+                  }
+               },
+               {
+                  "sys": {
+                     "space": {
+                        "sys": {
+                           "type": "Link",
+                           "linkType": "Space",
+                           "id": "thownz9vc5w0"
+                        }
+                     },
+                     "id": "29OfZHKGSQsmaGMIyo6QUK",
+                     "type": "Entry",
+                     "createdAt": "2017-01-08T13:59:17.616Z",
+                     "updatedAt": "2020-03-18T08:32:32.608Z",
+                     "environment": {
+                        "sys": {
+                           "id": "master",
+                           "type": "Link",
+                           "linkType": "Environment"
+                        }
+                     },
+                     "revision": 4,
+                     "contentType": {
+                        "sys": {
+                           "type": "Link",
+                           "linkType": "ContentType",
+                           "id": "author"
+                        }
+                     },
+                     "locale": "de-DE"
+                  },
+                  "fields": {
+                     "name": "Michael Bohmeyer",
+                     "portrait": {
+                        "sys": {
+                           "type": "Link",
+                           "linkType": "Asset",
+                           "id": "5qabJquRheIOMqCGAcKWwe"
+                        }
+                     },
+                     "emailaddress": "support@mein-grundeinkommen.de"
+                  }
+               },
+               {
+                  "sys": {
+                     "space": {
+                        "sys": {
+                           "type": "Link",
+                           "linkType": "Space",
+                           "id": "thownz9vc5w0"
+                        }
+                     },
+                     "id": "2RbmIbD4k8eOQCEeOCckqi",
+                     "type": "Entry",
+                     "createdAt": "2017-01-08T12:12:44.693Z",
+                     "updatedAt": "2017-02-16T00:31:38.461Z",
+                     "environment": {
+                        "sys": {
+                           "id": "master",
+                           "type": "Link",
+                           "linkType": "Environment"
+                        }
+                     },
+                     "revision": 6,
+                     "contentType": {
+                        "sys": {
+                           "type": "Link",
+                           "linkType": "ContentType",
+                           "id": "author"
+                        }
+                     },
+                     "locale": "de-DE"
+                  },
+                  "fields": {
+                     "name": "Maheba",
+                     "portrait": {
+                        "sys": {
+                           "type": "Link",
+                           "linkType": "Asset",
+                           "id": "73HeCUD0Ry8Ai0EW4gcWMK"
+                        }
+                     },
+                     "emailaddress": "maheba@mein-grundeinkommen.de"
+                  }
+               },
+               {
+                  "sys": {
+                     "space": {
+                        "sys": {
+                           "type": "Link",
+                           "linkType": "Space",
+                           "id": "thownz9vc5w0"
+                        }
+                     },
+                     "id": "3OUm4GfkIPdFaOa9I6JbJe",
+                     "type": "Entry",
+                     "createdAt": "2020-03-22T19:33:25.138Z",
+                     "updatedAt": "2020-03-22T19:33:25.138Z",
+                     "environment": {
+                        "sys": {
+                           "id": "master",
+                           "type": "Link",
+                           "linkType": "Environment"
+                        }
+                     },
+                     "revision": 1,
+                     "contentType": {
+                        "sys": {
+                           "type": "Link",
+                           "linkType": "ContentType",
+                           "id": "youtube_video"
+                        }
+                     },
+                     "locale": "de-DE"
+                  },
+                  "fields": {
+                     "video_id": "pt-ZHJNm8Qk",
+                     "title": "Dem Grundeinkommensgefühl auf der Spur"
+                  }
+               },
+               {
+                  "sys": {
+                     "space": {
+                        "sys": {
+                           "type": "Link",
+                           "linkType": "Space",
+                           "id": "thownz9vc5w0"
+                        }
+                     },
+                     "id": "3rbv9FjqCy6axfiLnw664r",
+                     "type": "Entry",
+                     "createdAt": "2020-03-22T19:35:35.850Z",
+                     "updatedAt": "2020-03-22T19:35:35.850Z",
+                     "environment": {
+                        "sys": {
+                           "id": "master",
+                           "type": "Link",
+                           "linkType": "Environment"
+                        }
+                     },
+                     "revision": 1,
+                     "contentType": {
+                        "sys": {
+                           "type": "Link",
+                           "linkType": "ContentType",
+                           "id": "rich_image"
+                        }
+                     },
+                     "locale": "de-DE"
+                  },
+                  "fields": {
+                     "image": {
+                        "sys": {
+                           "type": "Link",
+                           "linkType": "Asset",
+                           "id": "1X69ZIKykM0cysGIMooweU"
+                        }
+                     },
+                     "position": "Vollbild"
+                  }
+               },
+               {
+                  "sys": {
+                     "space": {
+                        "sys": {
+                           "type": "Link",
+                           "linkType": "Space",
+                           "id": "thownz9vc5w0"
+                        }
+                     },
+                     "id": "51TZUB6OqswsyQAu2g04ME",
+                     "type": "Entry",
+                     "createdAt": "2016-12-17T13:14:23.511Z",
+                     "updatedAt": "2016-12-17T13:14:23.511Z",
+                     "environment": {
+                        "sys": {
+                           "id": "master",
+                           "type": "Link",
+                           "linkType": "Environment"
+                        }
+                     },
+                     "revision": 1,
+                     "contentType": {
+                        "sys": {
+                           "type": "Link",
+                           "linkType": "ContentType",
+                           "id": "category"
+                        }
+                     },
+                     "locale": "de-DE"
+                  },
+                  "fields": {
+                     "name": "Gewinner*innen"
+                  }
+               },
+               {
+                  "sys": {
+                     "space": {
+                        "sys": {
+                           "type": "Link",
+                           "linkType": "Space",
+                           "id": "thownz9vc5w0"
+                        }
+                     },
+                     "id": "5VvsVFgRSWblIs4TJmD0fP",
+                     "type": "Entry",
+                     "createdAt": "2020-03-22T19:34:22.142Z",
+                     "updatedAt": "2020-03-22T19:34:22.142Z",
+                     "environment": {
+                        "sys": {
+                           "id": "master",
+                           "type": "Link",
+                           "linkType": "Environment"
+                        }
+                     },
+                     "revision": 1,
+                     "contentType": {
+                        "sys": {
+                           "type": "Link",
+                           "linkType": "ContentType",
+                           "id": "rich_image"
+                        }
+                     },
+                     "locale": "de-DE"
+                  },
+                  "fields": {
+                     "image": {
+                        "sys": {
+                           "type": "Link",
+                           "linkType": "Asset",
+                           "id": "4UKPR89IKskq8WCwa0GYeQ"
+                        }
+                     },
+                     "position": "Vollbild"
+                  }
+               },
+               {
+                  "sys": {
+                     "space": {
+                        "sys": {
+                           "type": "Link",
+                           "linkType": "Space",
+                           "id": "thownz9vc5w0"
+                        }
+                     },
+                     "id": "5wHn2CwcVcFCgBORceLHnP",
+                     "type": "Entry",
+                     "createdAt": "2020-03-22T19:35:04.611Z",
+                     "updatedAt": "2020-03-22T19:35:04.611Z",
+                     "environment": {
+                        "sys": {
+                           "id": "master",
+                           "type": "Link",
+                           "linkType": "Environment"
+                        }
+                     },
+                     "revision": 1,
+                     "contentType": {
+                        "sys": {
+                           "type": "Link",
+                           "linkType": "ContentType",
+                           "id": "rich_image"
+                        }
+                     },
+                     "locale": "de-DE"
+                  },
+                  "fields": {
+                     "image": {
+                        "sys": {
+                           "type": "Link",
+                           "linkType": "Asset",
+                           "id": "4Z0VWwW4sEywcCWWgOOsIm"
+                        }
+                     },
+                     "position": "Vollbild"
+                  }
+               },
+               {
+                  "sys": {
+                     "space": {
+                        "sys": {
+                           "type": "Link",
+                           "linkType": "Space",
+                           "id": "thownz9vc5w0"
+                        }
+                     },
+                     "id": "Xok5X2ySTCleJIVP6lDER",
+                     "type": "Entry",
+                     "createdAt": "2020-03-22T19:36:10.197Z",
+                     "updatedAt": "2020-03-22T19:36:10.197Z",
+                     "environment": {
+                        "sys": {
+                           "id": "master",
+                           "type": "Link",
+                           "linkType": "Environment"
+                        }
+                     },
+                     "revision": 1,
+                     "contentType": {
+                        "sys": {
+                           "type": "Link",
+                           "linkType": "ContentType",
+                           "id": "rich_image"
+                        }
+                     },
+                     "locale": "de-DE"
+                  },
+                  "fields": {
+                     "image": {
+                        "sys": {
+                           "type": "Link",
+                           "linkType": "Asset",
+                           "id": "6TAvslihQQwEQ0gycyu4yo"
+                        }
+                     },
+                     "position": "Vollbild"
+                  }
+               },
+               {
+                  "sys": {
+                     "space": {
+                        "sys": {
+                           "type": "Link",
+                           "linkType": "Space",
+                           "id": "thownz9vc5w0"
+                        }
+                     },
+                     "id": "vGienFOrtIM8G8IAo2uuA",
+                     "type": "Entry",
+                     "createdAt": "2017-10-24T18:14:12.100Z",
+                     "updatedAt": "2020-03-22T19:37:18.419Z",
+                     "environment": {
+                        "sys": {
+                           "id": "master",
+                           "type": "Link",
+                           "linkType": "Environment"
+                        }
+                     },
+                     "revision": 13,
+                     "contentType": {
+                        "sys": {
+                           "type": "Link",
+                           "linkType": "ContentType",
+                           "id": "news"
+                        }
+                     },
+                     "locale": "de-DE"
+                  },
+                  "fields": {
+                     "title": "Das Grundeinkommensgefühl",
+                     "slug": "grundeinkommensgefühl-2017",
+                     "date": "2017-10-24T00:00+02:00",
+                     "author": {
+                        "sys": {
+                           "type": "Link",
+                           "linkType": "Entry",
+                           "id": "29OfZHKGSQsmaGMIyo6QUK"
+                        }
+                     },
+                     "headerImage": {
+                        "sys": {
+                           "type": "Link",
+                           "linkType": "Asset",
+                           "id": "iHd92gq3leIKUsWiEMEyu"
+                        }
+                     },
+                     "rich_text": {
+                        "data": {},
+                        "content": [
+                           {
+                              "data": {},
+                              "content": [
+                                 {
+                                    "data": {},
+                                    "marks": [],
+                                    "value": "Steuermodelle, Auswirkungen auf den Arbeitsmarkt und Sozialleistungen\n- die Öffentlichkeit diskutiert wie wild über das Grundeinkommen. Aber\neine entscheidende Perspektive fehlt: Wie fühlt es sich an, so ein Grundeinkommen\nzu erhalten? Wir haben unsere Gewinner*innen eingeladen und sie gefragt.",
+                                    "nodeType": "text"
+                                 }
+                              ],
+                              "nodeType": "paragraph"
+                           },
+                           {
+                              "data": {},
+                              "content": [
+                                 {
+                                    "data": {},
+                                    "marks": [],
+                                    "value": "Die fehlende Perspektive",
+                                    "nodeType": "text"
+                                 }
+                              ],
+                              "nodeType": "heading-3"
+                           },
+                           {
+                              "data": {},
+                              "content": [
+                                 {
+                                    "data": {},
+                                    "marks": [],
+                                    "value": "Das Bedingungslose Grundeinkommen ist in der Mitte der Gesellschaft\nangekommen.",
+                                    "nodeType": "text"
+                                 },
+                                 {
+                                    "data": {
+                                       "uri": "https://www.mein-grundeinkommen.de/news/35KJ62FI7SuyCeqs2oqyEc"
+                                    },
+                                    "content": [
+                                       {
+                                          "data": {},
+                                          "marks": [],
+                                          "value": "Zwei Drittel der Bevölkerung befürworten es",
+                                          "nodeType": "text"
+                                       }
+                                    ],
+                                    "nodeType": "hyperlink"
+                                 },
+                                 {
+                                    "data": {},
+                                    "marks": [],
+                                    "value": ", ebenso einige bekannte Konzernchef*innen, Philosoph*innen und\nParteivorsitzende. Dieser rasante Aufstieg einer politischen Idee hat\ngute Gründe: Der bisherige Sozialstaat wirkt wenig zukunftsfähig, die\nDigitalisierung verändert die Welt massiv, die junge Generation hat\nneue Erwartungen ans Erwerbsleben, große Teile der Bevölkerung stehen\nvor dem Burnout und sehnen sich nach anderen Perspektiven.",
+                                    "nodeType": "text"
+                                 }
+                              ],
+                              "nodeType": "paragraph"
+                           },
+                           {
+                              "data": {},
+                              "content": [
+                                 {
+                                    "data": {},
+                                    "marks": [],
+                                    "value": "Neuerdings wird also in den Kolumnen gestritten: Wie hoch muss\nein Grundeinkommen sein? Wird es eine Inflation geben? Welches Modell\nist das fairste? Wie wird sich der Arbeitsmarkt verändern?",
+                                    "nodeType": "text"
+                                 }
+                              ],
+                              "nodeType": "paragraph"
+                           },
+                           {
+                              "data": {},
+                              "content": [
+                                 {
+                                    "data": {},
+                                    "marks": [],
+                                    "value": "Ich glaube, dass neben diesen Fragen eine entscheidende Perspektive\nfehlt. Eine Perspektive, die das Grundeinkommen überhaupt erst so mächtig\nund populär macht: Das Gefühl.",
+                                    "nodeType": "text"
+                                 }
+                              ],
+                              "nodeType": "paragraph"
+                           },
+                           {
+                              "data": {},
+                              "content": [
+                                 {
+                                    "data": {},
+                                    "marks": [],
+                                    "value": "Grundeinkommen ist nämlich nicht einfach eine weitere sozialpolitische\nMaßnahme, bei der es ausreicht, quantitative Vor- und Nachteile zu kalkulieren.\nGrundeinkommen ist Ausdruck eines fundamental neuen Paradigmas. In unserer\narbeitsteiligen Gesellschaft brauchen Menschen Geld zum Überleben. Und\neine Grundeinkommensgesellschaft gibt es ihnen einfach, jeden Monat\nneu, ohne Rückfragen, bedingungslos, einfach so, weil sie Menschen sind.\nDas Grundeinkommen sagt mir jeden Monat: Du bist okay, du darfst sein,\nwir glauben an dich, wir vertrauen dir. Das ist etwas ganz Neues! Das\nwird uns verändern - von innen!",
+                                    "nodeType": "text"
+                                 }
+                              ],
+                              "nodeType": "paragraph"
+                           },
+                           {
+                              "data": {},
+                              "content": [
+                                 {
+                                    "data": {},
+                                    "marks": [],
+                                    "value": "Und wie?",
+                                    "nodeType": "text"
+                                 }
+                              ],
+                              "nodeType": "paragraph"
+                           },
+                           {
+                              "data": {},
+                              "content": [
+                                 {
+                                    "data": {},
+                                    "marks": [],
+                                    "value": "Das berichten die Gewinner*innen!",
+                                    "nodeType": "text"
+                                 }
+                              ],
+                              "nodeType": "heading-3"
+                           },
+                           {
+                              "data": {},
+                              "content": [
+                                 {
+                                    "data": {},
+                                    "marks": [],
+                                    "value": "Schon mehr als 100 Menschen haben die Erfahrung gemacht. Was können\nwir von ihnen lernen? In der letzten Woche haben wir alle Grundeinkommens-Gewinner*innen\nnach Hamburg eingeladen, um mit ihnen darüber zu sprechen, was sich\ndenn nun wirklich bei ihnen verändert hat und ob es so ein Grundeinkommensgefühl\ntatsächlich gibt.",
+                                    "nodeType": "text"
+                                 }
+                              ],
+                              "nodeType": "paragraph"
+                           },
+                           {
+                              "data": {
+                                 "target": {
+                                    "sys": {
+                                       "id": "3OUm4GfkIPdFaOa9I6JbJe",
+                                       "type": "Link",
+                                       "linkType": "Entry"
+                                    }
+                                 }
+                              },
+                              "content": [],
+                              "nodeType": "embedded-entry-block"
+                           },
+                           {
+                              "data": {},
+                              "content": [
+                                 {
+                                    "data": {},
+                                    "marks": [
+                                       {
+                                          "type": "bold"
+                                       }
+                                    ],
+                                    "value": "Christoph kündigt im Callcenter",
+                                    "nodeType": "text"
+                                 },
+                                 {
+                                    "data": {},
+                                    "marks": [],
+                                    "value": "\nDa ist zum Beispiel Christoph, einer der ersten Gewinner. Er verhielt sich so, wie es viele befürchten, sollte Grundeinkommen eingeführt werden. Kurz nachdem die ersten 1.000 Euro auf seinem Konto eintrafen, kündigte er seinen Job im Callcenter. Er fühlte sich plötzlich “frei, leicht und entspannt”.",
+                                    "nodeType": "text"
+                                 }
+                              ],
+                              "nodeType": "paragraph"
+                           },
+                           {
+                              "data": {},
+                              "content": [
+                                 {
+                                    "data": {},
+                                    "marks": [],
+                                    "value": "Bei Christoph hat sich aber noch mehr verändert. Durch das Grundeinkommen\nkonnte er ein Pädagogik-Studium beginnen. So wurde seine Freundin plötzlich\nzur Hauptverdienerin in der Familie. In Hamburg berichtete mir Christoph\nganz nebenbei und selbstverständlich: \"Natürlich mach ich den Abwasch\nzu Hause.“ Das zeigt: Wo Grundeinkommen hinkommt, entsteht neuer Verhandlungsspielraum,\nder auch dazu führen kann verkrustete Lebensweisen zu verändern.",
+                                    "nodeType": "text"
+                                 }
+                              ],
+                              "nodeType": "paragraph"
+                           },
+                           {
+                              "data": {},
+                              "content": [
+                                 {
+                                    "data": {},
+                                    "marks": [],
+                                    "value": "Es haben übrigens neben Christoph nur weitere 4 von 112 Gewinnern\nihren Job gekündigt. Alle arbeiten in anderen Jobs weiter oder haben\nsich selbstständig gemacht.",
+                                    "nodeType": "text"
+                                 }
+                              ],
+                              "nodeType": "paragraph"
+                           },
+                           {
+                              "data": {
+                                 "target": {
+                                    "sys": {
+                                       "id": "5VvsVFgRSWblIs4TJmD0fP",
+                                       "type": "Link",
+                                       "linkType": "Entry"
+                                    }
+                                 }
+                              },
+                              "content": [],
+                              "nodeType": "embedded-entry-block"
+                           },
+                           {
+                              "data": {},
+                              "content": [
+                                 {
+                                    "data": {},
+                                    "marks": [
+                                       {
+                                          "type": "bold"
+                                       }
+                                    ],
+                                    "value": "Robins Familie verhandelt die Machtfrage",
+                                    "nodeType": "text"
+                                 },
+                                 {
+                                    "data": {},
+                                    "marks": [],
+                                    "value": "\nRobin war 8 Jahre alt, als er gewann. Doch wer würde das Geld verwalten? Er selbst? Dann hätte er möglicherweise mehr Geld in der Tasche als seine Eltern. Oder seine Eltern? Die dann sagen könnten: „Du bekommst dein Grundeinkommen erst, wenn du dein Zimmer aufräumst.“",
+                                    "nodeType": "text"
+                                 }
+                              ],
+                              "nodeType": "paragraph"
+                           },
+                           {
+                              "data": {},
+                              "content": [
+                                 {
+                                    "data": {},
+                                    "marks": [],
+                                    "value": "Die Familie konnte nicht anders als sich mit diesen Fragen auseinanderzusetzen.\nDas zeigt: Wo Grundeinkommen hinkommt, wird automatisch die Machtfrage\nneu gestellt und man kann sich ihr nicht entziehen. Robin teilte sein\nGeld übrigens bereitwillig mit der ganzen Familie, die seither enger\nzusammengerückt ist.",
+                                    "nodeType": "text"
+                                 }
+                              ],
+                              "nodeType": "paragraph"
+                           },
+                           {
+                              "data": {
+                                 "target": {
+                                    "sys": {
+                                       "id": "5wHn2CwcVcFCgBORceLHnP",
+                                       "type": "Link",
+                                       "linkType": "Entry"
+                                    }
+                                 }
+                              },
+                              "content": [],
+                              "nodeType": "embedded-entry-block"
+                           },
+                           {
+                              "data": {},
+                              "content": [
+                                 {
+                                    "data": {},
+                                    "marks": [
+                                       {
+                                          "type": "bold"
+                                       }
+                                    ],
+                                    "value": "Marcs chronische Krankheit ist plötzlich symptomfrei",
+                                    "nodeType": "text"
+                                 },
+                                 {
+                                    "data": {},
+                                    "marks": [],
+                                    "value": "\nMarc hat, wie rund 300.000 andere Deutsche, die Darmkrankheit Morbus Crohn. Es traten immer dann neue Schübe auf, wenn er sich mit verschiedenen Behörden um die Zahlungen zu seinem Lebensunterhalt streiten musste. Seitdem Marc sein Grundeinkommen bedingungslos erhielt, kamen plötzlich keine Schübe mehr. Zum ersten Mal seit zehn Jahren konnte er seine Medikamente absetzen. Die Existenzangst war plötzlich weg.",
+                                    "nodeType": "text"
+                                 }
+                              ],
+                              "nodeType": "paragraph"
+                           },
+                           {
+                              "data": {},
+                              "content": [
+                                 {
+                                    "data": {},
+                                    "marks": [],
+                                    "value": "Ähnliche Effekte berichten fast alle Gewinner*innen. Sie schlafen\nbesser seitdem sie bedingungslos abgesichert sind. Angestellte berichten\nzudem, dass sie nun mehr arbeiten, aber dabei viel weniger gestresst\nsind. Stress und Krankheiten kommen eben häufig nicht von den langen\nTo-do-Listen, sondern von den dahinterstehenden Sorgen, was passiert,\nwenn man die To-do-Liste nicht schafft.",
+                                    "nodeType": "text"
+                                 }
+                              ],
+                              "nodeType": "paragraph"
+                           },
+                           {
+                              "data": {
+                                 "target": {
+                                    "sys": {
+                                       "id": "3rbv9FjqCy6axfiLnw664r",
+                                       "type": "Link",
+                                       "linkType": "Entry"
+                                    }
+                                 }
+                              },
+                              "content": [],
+                              "nodeType": "embedded-entry-block"
+                           },
+                           {
+                              "data": {},
+                              "content": [
+                                 {
+                                    "data": {},
+                                    "marks": [
+                                       {
+                                          "type": "bold"
+                                       }
+                                    ],
+                                    "value": "Jesta wagt ein Geschäftsexperiment",
+                                    "nodeType": "text"
+                                 },
+                                 {
+                                    "data": {},
+                                    "marks": [],
+                                    "value": "\nVier Grundeinkommensgewinner*innen haben sich während ihres Jahres selbstständig gemacht und zahlreiche weitere weitergebildet, weil nun das Geld für neue, mutige Schritte da war.",
+                                    "nodeType": "text"
+                                 }
+                              ],
+                              "nodeType": "paragraph"
+                           },
+                           {
+                              "data": {},
+                              "content": [
+                                 {
+                                    "data": {},
+                                    "marks": [],
+                                    "value": "Jesta ging aber noch weiter: In ihrer Coaching-Tätigkeit startete\nsie, mit dem Grundeinkommen im Rücken, ein Experiment: Ihre Kund*innen\nkonnten fortan bezahlen soviel sie wollten.",
+                                    "nodeType": "text"
+                                 }
+                              ],
+                              "nodeType": "paragraph"
+                           },
+                           {
+                              "data": {},
+                              "content": [
+                                 {
+                                    "data": {},
+                                    "marks": [],
+                                    "value": "Hier zeigt sich, wie ein Grundeinkommen seine Wirkung potenzieren\nkönnte. Nicht nur verändert sich etwas im eigenen Leben, in der eigenen\nGesundheit und im nahen Umfeld. Wenn ich keine Existenzangst mehr haben\nmuss, dann kann ich auch anderen viel mehr vertrauen - daraus könnten\nsich ganz neue Geschäftspraktiken und -modelle entwickeln.",
+                                    "nodeType": "text"
+                                 }
+                              ],
+                              "nodeType": "paragraph"
+                           },
+                           {
+                              "data": {
+                                 "target": {
+                                    "sys": {
+                                       "id": "Xok5X2ySTCleJIVP6lDER",
+                                       "type": "Link",
+                                       "linkType": "Entry"
+                                    }
+                                 }
+                              },
+                              "content": [],
+                              "nodeType": "embedded-entry-block"
+                           },
+                           {
+                              "data": {},
+                              "content": [
+                                 {
+                                    "data": {},
+                                    "marks": [
+                                       {
+                                          "type": "bold"
+                                       }
+                                    ],
+                                    "value": "Für Astrid wird Unmögliches denkbar",
+                                    "nodeType": "text"
+                                 },
+                                 {
+                                    "data": {},
+                                    "marks": [],
+                                    "value": "\nDie für mich beeindruckendste Geschichte ist die von Astrid. Sie zeigt, wie sehr die neue Bedingungslosigkeit die Brille verändern kann, durch die man die Welt sieht. Denn für Astrid waren Geld und Konsum auf einmal gar nicht mehr so wichtig, weil es ja keinen Mangel mehr gab. Plötzlich wurden Dinge denkbar, die früher nicht denkbar waren, wie z.B. kein Auto zu besitzen oder mit Anfang 50 nochmal in eine WG zu ziehen.",
+                                    "nodeType": "text"
+                                 }
+                              ],
+                              "nodeType": "paragraph"
+                           },
+                           {
+                              "data": {
+                                 "target": {
+                                    "sys": {
+                                       "id": "x8biCspvW8GhebsZTTEWb",
+                                       "type": "Link",
+                                       "linkType": "Entry"
+                                    }
+                                 }
+                              },
+                              "content": [],
+                              "nodeType": "embedded-entry-block"
+                           },
+                           {
+                              "data": {},
+                              "content": [
+                                 {
+                                    "data": {},
+                                    "marks": [],
+                                    "value": "Das Grundeinkommen ist nicht die Antwort, sondern stellt die richtigen\nFragen",
+                                    "nodeType": "text"
+                                 }
+                              ],
+                              "nodeType": "heading-3"
+                           },
+                           {
+                              "data": {},
+                              "content": [
+                                 {
+                                    "data": {},
+                                    "marks": [],
+                                    "value": "Auch vergangene Woche in Hamburg berichteten fast alle Gewinner*innen:\nMit Grundeinkommen hat sich oft auf dem Papier nicht viel geändert,\naber dafür die Haltung zum Leben selbst. Die Bedingungslosigkeit wurde\ndabei als monatlicher Vertrauensvorschuss empfunden, der die Gewinner*innen\nmotiviert hat. Es setzt ein „Om-Gefühl“ ein, eine neue Ruhe, die dafür\nsorgt, dass die wirklich wichtigen Dinge mehr Beachtung bekommen. Viele\nhatten sich auch vorher schon ein anderes, bewussteres, stressfreieres\nLeben gewünscht – aber erst Grundeinkommen hat ihnen geholfen, es zu\nleben.",
+                                    "nodeType": "text"
+                                 }
+                              ],
+                              "nodeType": "paragraph"
+                           },
+                           {
+                              "data": {},
+                              "content": [
+                                 {
+                                    "data": {},
+                                    "marks": [],
+                                    "value": "Der Austausch mit den Gewinner*innen hat mir verdeutlicht, warum\nGrundeinkommen so einen radikal anderen Ansatz zum Status Quo darstellt.\nEs fordert uns heraus, ohne uns etwas aufzuzwingen. Die Gewinner*innen\nsagten einstimmig: diese Herausforderung fühlt sich mächtig an und macht\nSpaß! Grundeinkommen löst Gefühle aus, die das Potential haben, tiefgreifende\nVeränderung zu bewirken. In uns selbst, in unseren Beziehungen, in unserer\nArbeit. Warum also nicht auch für unser gesellschaftliches Zusammenleben?",
+                                    "nodeType": "text"
+                                 }
+                              ],
+                              "nodeType": "paragraph"
+                           }
+                        ],
+                        "nodeType": "document"
+                     },
+                     "category": {
+                        "sys": {
+                           "type": "Link",
+                           "linkType": "Entry",
+                           "id": "51TZUB6OqswsyQAu2g04ME"
+                        }
+                     },
+                     "migrationStatus": "Fertig migriert (keine Probleme)"
+                  }
+               },
+               {
+                  "sys": {
+                     "space": {
+                        "sys": {
+                           "type": "Link",
+                           "linkType": "Space",
+                           "id": "thownz9vc5w0"
+                        }
+                     },
+                     "id": "x8biCspvW8GhebsZTTEWb",
+                     "type": "Entry",
+                     "createdAt": "2020-03-22T19:36:56.456Z",
+                     "updatedAt": "2020-03-22T19:36:56.456Z",
+                     "environment": {
+                        "sys": {
+                           "id": "master",
+                           "type": "Link",
+                           "linkType": "Environment"
+                        }
+                     },
+                     "revision": 1,
+                     "contentType": {
+                        "sys": {
+                           "type": "Link",
+                           "linkType": "ContentType",
+                           "id": "rich_image"
+                        }
+                     },
+                     "locale": "de-DE"
+                  },
+                  "fields": {
+                     "image": {
+                        "sys": {
+                           "type": "Link",
+                           "linkType": "Asset",
+                           "id": "7thHV0aTXqwYU8YUemUKOa"
+                        }
+                     },
+                     "position": "Vollbild"
+                  }
+               }
+            ],
+            "Asset": [
+               {
+                  "sys": {
+                     "space": {
+                        "sys": {
+                           "type": "Link",
+                           "linkType": "Space",
+                           "id": "thownz9vc5w0"
+                        }
+                     },
+                     "id": "1X69ZIKykM0cysGIMooweU",
+                     "type": "Asset",
+                     "createdAt": "2017-10-24T16:37:51.214Z",
+                     "updatedAt": "2017-10-24T16:37:51.214Z",
+                     "environment": {
+                        "sys": {
+                           "id": "master",
+                           "type": "Link",
+                           "linkType": "Environment"
+                        }
+                     },
+                     "revision": 1,
+                     "locale": "de-DE"
+                  },
+                  "fields": {
+                     "title": "Mark-06",
+                     "file": {
+                        "url": "//images.ctfassets.net/thownz9vc5w0/1X69ZIKykM0cysGIMooweU/19d1bf2a520657aad7cd44d839ad1ed2/Mark-06.jpg",
+                        "details": {
+                           "size": 317792,
+                           "image": {
+                              "width": 1200,
+                              "height": 675
+                           }
+                        },
+                        "fileName": "Mark-06.jpg",
+                        "contentType": "image/jpeg"
+                     }
+                  }
+               },
+               {
+                  "sys": {
+                     "space": {
+                        "sys": {
+                           "type": "Link",
+                           "linkType": "Space",
+                           "id": "thownz9vc5w0"
+                        }
+                     },
+                     "id": "4UKPR89IKskq8WCwa0GYeQ",
+                     "type": "Asset",
+                     "createdAt": "2017-10-24T16:39:14.781Z",
+                     "updatedAt": "2017-10-24T16:39:14.781Z",
+                     "environment": {
+                        "sys": {
+                           "id": "master",
+                           "type": "Link",
+                           "linkType": "Environment"
+                        }
+                     },
+                     "revision": 1,
+                     "locale": "de-DE"
+                  },
+                  "fields": {
+                     "title": "BGE Christoph",
+                     "file": {
+                        "url": "//images.ctfassets.net/thownz9vc5w0/4UKPR89IKskq8WCwa0GYeQ/f7a43b1f7cb86653c543cfa12ade5ad1/Bildschirmfoto_2017-10-24_um_12.59.32.png",
+                        "details": {
+                           "size": 962628,
+                           "image": {
+                              "width": 1200,
+                              "height": 675
+                           }
+                        },
+                        "fileName": "Bildschirmfoto 2017-10-24 um 12.59.32.png",
+                        "contentType": "image/png"
+                     }
+                  }
+               },
+               {
+                  "sys": {
+                     "space": {
+                        "sys": {
+                           "type": "Link",
+                           "linkType": "Space",
+                           "id": "thownz9vc5w0"
+                        }
+                     },
+                     "id": "4Z0VWwW4sEywcCWWgOOsIm",
+                     "type": "Asset",
+                     "createdAt": "2017-10-24T16:39:52.456Z",
+                     "updatedAt": "2017-10-24T16:39:52.456Z",
+                     "environment": {
+                        "sys": {
+                           "id": "master",
+                           "type": "Link",
+                           "linkType": "Environment"
+                        }
+                     },
+                     "revision": 1,
+                     "locale": "de-DE"
+                  },
+                  "fields": {
+                     "title": "BGE-OlgaRobin-12",
+                     "file": {
+                        "url": "//images.ctfassets.net/thownz9vc5w0/4Z0VWwW4sEywcCWWgOOsIm/7464916a6a5d4345287479ef96ca3336/BGE-OlgaRobin-12.jpg",
+                        "details": {
+                           "size": 507996,
+                           "image": {
+                              "width": 1200,
+                              "height": 675
+                           }
+                        },
+                        "fileName": "BGE-OlgaRobin-12.jpg",
+                        "contentType": "image/jpeg"
+                     }
+                  }
+               },
+               {
+                  "sys": {
+                     "space": {
+                        "sys": {
+                           "type": "Link",
+                           "linkType": "Space",
+                           "id": "thownz9vc5w0"
+                        }
+                     },
+                     "id": "5AGBz5Aqm4ImSQAs2mIOIO",
+                     "type": "Asset",
+                     "createdAt": "2017-02-01T14:16:12.620Z",
+                     "updatedAt": "2017-02-01T14:17:04.804Z",
+                     "environment": {
+                        "sys": {
+                           "id": "master",
+                           "type": "Link",
+                           "linkType": "Environment"
+                        }
+                     },
+                     "revision": 2,
+                     "locale": "de-DE"
+                  },
+                  "fields": {
+                     "title": "Jesta",
+                     "file": {
+                        "url": "//images.ctfassets.net/thownz9vc5w0/5AGBz5Aqm4ImSQAs2mIOIO/cf311bbd2216d077aadf69ca971be9b1/98blog-1024x604.jpg",
+                        "details": {
+                           "size": 457540,
+                           "image": {
+                              "width": 1200,
+                              "height": 675
+                           }
+                        },
+                        "fileName": "98blog-1024x604.jpg",
+                        "contentType": "image/jpeg"
+                     }
+                  }
+               },
+               {
+                  "sys": {
+                     "space": {
+                        "sys": {
+                           "type": "Link",
+                           "linkType": "Space",
+                           "id": "thownz9vc5w0"
+                        }
+                     },
+                     "id": "5qabJquRheIOMqCGAcKWwe",
+                     "type": "Asset",
+                     "createdAt": "2017-01-23T00:54:15.930Z",
+                     "updatedAt": "2020-03-17T10:36:41.910Z",
+                     "environment": {
+                        "sys": {
+                           "id": "master",
+                           "type": "Link",
+                           "linkType": "Environment"
+                        }
+                     },
+                     "revision": 5,
+                     "locale": "de-DE"
+                  },
+                  "fields": {
+                     "title": "Micha",
+                     "file": {
+                        "url": "//images.ctfassets.net/thownz9vc5w0/5qabJquRheIOMqCGAcKWwe/4349b605644577753f0e573e1fd8936b/Michael_Bohmeyer.jpg",
+                        "details": {
+                           "size": 82482,
+                           "image": {
+                              "width": 300,
+                              "height": 300
+                           }
+                        },
+                        "fileName": "Michael Bohmeyer.jpg",
+                        "contentType": "image/jpeg"
+                     }
+                  }
+               },
+               {
+                  "sys": {
+                     "space": {
+                        "sys": {
+                           "type": "Link",
+                           "linkType": "Space",
+                           "id": "thownz9vc5w0"
+                        }
+                     },
+                     "id": "6TAvslihQQwEQ0gycyu4yo",
+                     "type": "Asset",
+                     "createdAt": "2017-10-24T16:40:52.811Z",
+                     "updatedAt": "2017-10-24T16:40:52.811Z",
+                     "environment": {
+                        "sys": {
+                           "id": "master",
+                           "type": "Link",
+                           "linkType": "Environment"
+                        }
+                     },
+                     "revision": 1,
+                     "locale": "de-DE"
+                  },
+                  "fields": {
+                     "title": "JestaPhoenix2",
+                     "file": {
+                        "url": "//images.ctfassets.net/thownz9vc5w0/6TAvslihQQwEQ0gycyu4yo/f3b5bddee41ea7551818fc43957b8fb7/JestaPhoenix2.jpg",
+                        "details": {
+                           "size": 407721,
+                           "image": {
+                              "width": 1200,
+                              "height": 675
+                           }
+                        },
+                        "fileName": "JestaPhoenix2.jpg",
+                        "contentType": "image/jpeg"
+                     }
+                  }
+               },
+               {
+                  "sys": {
+                     "space": {
+                        "sys": {
+                           "type": "Link",
+                           "linkType": "Space",
+                           "id": "thownz9vc5w0"
+                        }
+                     },
+                     "id": "73HeCUD0Ry8Ai0EW4gcWMK",
+                     "type": "Asset",
+                     "createdAt": "2017-01-23T00:53:36.554Z",
+                     "updatedAt": "2017-01-23T00:53:45.344Z",
+                     "environment": {
+                        "sys": {
+                           "id": "master",
+                           "type": "Link",
+                           "linkType": "Environment"
+                        }
+                     },
+                     "revision": 2,
+                     "locale": "de-DE"
+                  },
+                  "fields": {
+                     "title": "Maheba",
+                     "file": {
+                        "url": "//images.ctfassets.net/thownz9vc5w0/73HeCUD0Ry8Ai0EW4gcWMK/f62e392fddc54975870f25b7230ef37a/maheba_fdbiphyq.png",
+                        "details": {
+                           "size": 101060,
+                           "image": {
+                              "width": 300,
+                              "height": 300
+                           }
+                        },
+                        "fileName": "maheba_fdbiphyq.png",
+                        "contentType": "image/png"
+                     }
+                  }
+               },
+               {
+                  "sys": {
+                     "space": {
+                        "sys": {
+                           "type": "Link",
+                           "linkType": "Space",
+                           "id": "thownz9vc5w0"
+                        }
+                     },
+                     "id": "7thHV0aTXqwYU8YUemUKOa",
+                     "type": "Asset",
+                     "createdAt": "2017-10-24T16:38:32.325Z",
+                     "updatedAt": "2017-10-24T16:38:32.325Z",
+                     "environment": {
+                        "sys": {
+                           "id": "master",
+                           "type": "Link",
+                           "linkType": "Environment"
+                        }
+                     },
+                     "revision": 1,
+                     "locale": "de-DE"
+                  },
+                  "fields": {
+                     "title": "BGE-Astrid-27",
+                     "file": {
+                        "url": "//images.ctfassets.net/thownz9vc5w0/7thHV0aTXqwYU8YUemUKOa/6c2d61c400af0d48cd7a6a3866e01176/BGE-Astrid-27.jpg",
+                        "details": {
+                           "size": 502898,
+                           "image": {
+                              "width": 1200,
+                              "height": 675
+                           }
+                        },
+                        "fileName": "BGE-Astrid-27.jpg",
+                        "contentType": "image/jpeg"
+                     }
+                  }
+               },
+               {
+                  "sys": {
+                     "space": {
+                        "sys": {
+                           "type": "Link",
+                           "linkType": "Space",
+                           "id": "thownz9vc5w0"
+                        }
+                     },
+                     "id": "iHd92gq3leIKUsWiEMEyu",
+                     "type": "Asset",
+                     "createdAt": "2017-10-24T18:36:29.963Z",
+                     "updatedAt": "2017-10-24T18:36:29.964Z",
+                     "environment": {
+                        "sys": {
+                           "id": "master",
+                           "type": "Link",
+                           "linkType": "Environment"
+                        }
+                     },
+                     "revision": 1,
+                     "locale": "de-DE"
+                  },
+                  "fields": {
+                     "title": "Titelbild_Gefühl",
+                     "file": {
+                        "url": "//images.ctfassets.net/thownz9vc5w0/iHd92gq3leIKUsWiEMEyu/bf3e731f49c7c2ff0c43e07c0f29f941/Bildschirmfoto_2017-10-24_um_18.17.39__1_.png",
+                        "details": {
+                           "size": 958730,
+                           "image": {
+                              "width": 1200,
+                              "height": 675
+                           }
+                        },
+                        "fileName": "Bildschirmfoto 2017-10-24 um 18.17.39 (1).png",
+                        "contentType": "image/png"
+                     }
+                  }
+               }
+            ]
+          }
+          }
 
     http_version:
   recorded_at: Wed, 16 Apr 2014 09:00:21 GMT
