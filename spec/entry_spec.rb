@@ -792,7 +792,7 @@ describe Contentful::Entry do
         class Winner < Contentful::Entry; end
 
         module Elements
-          class RichImage < Contentful::Entry; end
+          class RichImage < Contentful::Asset; end
         end
       end
     end
@@ -830,7 +830,7 @@ describe Contentful::Entry do
       end
     end
 
-    context 'when the order of entries is reveresed' do
+    context 'when the order of entries is reversed' do
       let(:article) { winner.news.last }
 
       it 'encounters a bug in hydration' do
