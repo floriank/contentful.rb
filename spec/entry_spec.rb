@@ -790,6 +790,10 @@ describe Contentful::Entry do
       module News
         class Article < Contentful::Entry; end
         class Winner < Contentful::Entry; end
+
+        module Elements
+          class RichImage < Contentful::Entry; end
+        end
       end
     end
 
@@ -803,7 +807,8 @@ describe Contentful::Entry do
         raise_for_empty_fields: false,
         entry_mapping: {
           'news' => Content::News::Article,
-          'winner' => Content::News::Winner
+          'winner' => Content::News::Winner,
+          'rich_image' => Content::News::Elements::RichImage
         }
       )
     end
@@ -813,9 +818,15 @@ describe Contentful::Entry do
     let(:article) { winner.news.first }
     let(:rich_text) { article.rich_text }
 
+    let(:image_url) do
+      '//images.ctfassets.net/thownz9vc5w0/4UKPR89IKskq8WCwa0GYeQ/'\
+      'f7a43b1f7cb86653c543cfa12ade5ad1/Bildschirmfoto_2017-10-24_um_12.59.32.png'
+    end
+
     it 'encounters no bug during hydration' do
       vcr('entries/issue_225') do
         expect(article.id).to eq 'vGienFOrtIM8G8IAo2uuA'
+        p rich_text['content'][13]['data']['target']
       end
     end
 
@@ -825,6 +836,9 @@ describe Contentful::Entry do
       it 'encounters a bug in hydration' do
         vcr('entries/issue_225_broken') do
           expect(article.id).to eq 'vGienFOrtIM8G8IAo2uuA'
+
+          # now what
+          p rich_text['content'][13]['data']['target']
         end
       end
     end
