@@ -785,7 +785,7 @@ describe Contentful::Entry do
     end
   end
 
-  context 'when encountering circular references (issue #225)' do
+  describe 'when encountering circular references (issue #225)' do
     module Content
       module News
         class Article < Contentful::Entry; end
@@ -810,12 +810,22 @@ describe Contentful::Entry do
 
     let(:entries) { client.entries }
     let(:winner) { entries.first }
+    let(:article) { winner.news.first }
+    let(:rich_text) { article.rich_text }
 
-    it 'encounters a bug in hydration' do
-      vcr('entries/issue_225_broken') do
-        news = winner.news
+    it 'encounters no bug during hydration' do
+      vcr('entries/issue_225') do
+        expect(article.id).to eq 'vGienFOrtIM8G8IAo2uuA'
+      end
+    end
 
-        # look for failing images in them rich text of the news
+    context 'when the order of entries is reveresed' do
+      let(:article) { winner.news.last }
+
+      it 'encounters a bug in hydration' do
+        vcr('entries/issue_225_broken') do
+          expect(article.id).to eq 'vGienFOrtIM8G8IAo2uuA'
+        end
       end
     end
   end
