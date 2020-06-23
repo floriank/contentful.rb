@@ -63,112 +63,259 @@ http_interactions:
           "sys": {
             "type": "Array"
           },
-          "total": 2,
+          "total": 16,
           "skip": 0,
-          "limit": 100,
+          "limit": 1000,
           "items": [
             {
-              "description": "Newsartikel",
-              "displayField": "title",
+              "sys": {
+                "space": {
+                  "sys": {
+                    "type": "Link",
+                    "linkType": "Space",
+                    "id": "thownz9vc5w0"
+                  }
+                },
+                "id": "member",
+                "type": "ContentType",
+                "createdAt": "2016-06-14T15:36:04.972Z",
+                "updatedAt": "2020-03-24T10:05:28.711Z",
+                "environment": {
+                  "sys": {
+                    "id": "master",
+                    "type": "Link",
+                    "linkType": "Environment"
+                  }
+                },
+                "revision": 26
+              },
+              "displayField": "name",
+              "name": "Teammitglied",
+              "description": "Alle Teammitglieder",
               "fields": [
                 {
+                  "id": "name",
+                  "name": "Name",
+                  "type": "Symbol",
+                  "localized": false,
+                  "required": true,
                   "disabled": false,
+                  "omitted": false
+                },
+                {
+                  "id": "jobTitle",
+                  "name": "Aufgabengebiet",
+                  "type": "Symbol",
+                  "localized": true,
+                  "required": true,
+                  "disabled": false,
+                  "omitted": false
+                },
+                {
+                  "id": "about",
+                  "name": "Beschreibung",
+                  "type": "Text",
+                  "localized": false,
+                  "required": true,
+                  "disabled": false,
+                  "omitted": false
+                },
+                {
+                  "id": "image",
+                  "name": "Foto",
+                  "type": "Link",
+                  "localized": false,
+                  "required": false,
+                  "disabled": false,
+                  "omitted": false,
+                  "linkType": "Asset"
+                },
+                {
+                  "id": "hover_image",
+                  "name": "Foto (sekundär)",
+                  "type": "Link",
+                  "localized": false,
+                  "required": false,
+                  "disabled": false,
+                  "omitted": false,
+                  "linkType": "Asset"
+                }
+              ]
+            },
+            {
+              "sys": {
+                "space": {
+                  "sys": {
+                    "type": "Link",
+                    "linkType": "Space",
+                    "id": "thownz9vc5w0"
+                  }
+                },
+                "id": "html_code",
+                "type": "ContentType",
+                "createdAt": "2020-03-13T19:10:41.779Z",
+                "updatedAt": "2020-03-17T13:17:47.798Z",
+                "environment": {
+                  "sys": {
+                    "id": "master",
+                    "type": "Link",
+                    "linkType": "Environment"
+                  }
+                },
+                "revision": 5
+              },
+              "displayField": "title",
+              "name": "Code Snippet",
+              "description": "Beliebigen HTML Code in die Seite einbetten. Bitte nur im Ausnahmefall verwenden. Bei wiederkehrenden Elementen spezifische Inhaltstypen anlegen.",
+              "fields": [
+                {
                   "id": "title",
+                  "name": "Titel",
+                  "type": "Symbol",
                   "localized": false,
+                  "required": true,
+                  "disabled": false,
+                  "omitted": false
+                },
+                {
+                  "id": "code",
+                  "name": "Code",
+                  "type": "Text",
+                  "localized": false,
+                  "required": true,
+                  "disabled": false,
+                  "omitted": false
+                }
+              ]
+            },
+            {
+              "sys": {
+                "space": {
+                  "sys": {
+                    "type": "Link",
+                    "linkType": "Space",
+                    "id": "thownz9vc5w0"
+                  }
+                },
+                "id": "news",
+                "type": "ContentType",
+                "createdAt": "2016-09-13T14:05:58.389Z",
+                "updatedAt": "2020-02-27T17:50:06.646Z",
+                "environment": {
+                  "sys": {
+                    "id": "master",
+                    "type": "Link",
+                    "linkType": "Environment"
+                  }
+                },
+                "revision": 46
+              },
+              "displayField": "title",
+              "name": "Artikel",
+              "description": "Newsartikel",
+              "fields": [
+                {
+                  "id": "title",
                   "name": "Title",
-                  "omitted": false,
+                  "type": "Symbol",
+                  "localized": false,
                   "required": false,
-                  "type": "Symbol"
+                  "disabled": false,
+                  "omitted": false
                 },
                 {
-                  "disabled": false,
                   "id": "subtitle",
-                  "localized": false,
                   "name": "Untertitel (kurz)",
-                  "omitted": false,
+                  "type": "Symbol",
+                  "localized": false,
                   "required": false,
-                  "type": "Symbol"
+                  "disabled": false,
+                  "omitted": false
                 },
                 {
-                  "disabled": false,
                   "id": "slug",
-                  "localized": false,
                   "name": "Slug",
-                  "omitted": false,
+                  "type": "Symbol",
+                  "localized": false,
                   "required": false,
-                  "type": "Symbol"
+                  "disabled": false,
+                  "omitted": false
                 },
                 {
-                  "disabled": false,
                   "id": "date",
-                  "localized": false,
                   "name": "Datum",
-                  "omitted": false,
+                  "type": "Date",
+                  "localized": false,
                   "required": true,
-                  "type": "Date"
+                  "disabled": false,
+                  "omitted": false
                 },
                 {
-                  "disabled": false,
                   "id": "author",
-                  "linkType": "Entry",
-                  "localized": false,
                   "name": "Autor*in",
-                  "omitted": false,
+                  "type": "Link",
+                  "localized": false,
                   "required": true,
-                  "type": "Link"
+                  "disabled": false,
+                  "omitted": false,
+                  "linkType": "Entry"
                 },
                 {
-                  "disabled": false,
                   "id": "headerImage",
-                  "linkType": "Asset",
-                  "localized": false,
                   "name": "Header-Bild",
-                  "omitted": false,
+                  "type": "Link",
+                  "localized": false,
                   "required": true,
-                  "type": "Link"
+                  "disabled": false,
+                  "omitted": false,
+                  "linkType": "Asset"
                 },
                 {
-                  "disabled": false,
                   "id": "rich_text",
-                  "localized": false,
                   "name": "Rich Text",
-                  "omitted": false,
+                  "type": "RichText",
+                  "localized": false,
                   "required": false,
-                  "type": "RichText"
+                  "disabled": false,
+                  "omitted": false
                 },
                 {
-                  "disabled": false,
                   "id": "text",
-                  "localized": false,
                   "name": "Text",
-                  "omitted": false,
+                  "type": "Text",
+                  "localized": false,
                   "required": false,
-                  "type": "Text"
+                  "disabled": false,
+                  "omitted": false
                 },
                 {
-                  "disabled": false,
                   "id": "category",
-                  "linkType": "Entry",
-                  "localized": false,
                   "name": "Kategorie",
-                  "omitted": false,
+                  "type": "Link",
+                  "localized": false,
                   "required": true,
-                  "type": "Link"
-                },
-                {
-                  "disabled": true,
-                  "id": "categoryName",
-                  "localized": false,
-                  "name": "Kategorie",
-                  "omitted": false,
-                  "required": false,
-                  "type": "Symbol"
-                },
-                {
                   "disabled": false,
+                  "omitted": false,
+                  "linkType": "Entry"
+                },
+                {
+                  "id": "categoryName",
+                  "name": "Kategorie",
+                  "type": "Symbol",
+                  "localized": false,
+                  "required": false,
+                  "disabled": true,
+                  "omitted": false
+                },
+                {
                   "id": "winners",
+                  "name": "Gewinner*innen",
+                  "type": "Array",
+                  "localized": false,
+                  "required": false,
+                  "disabled": false,
+                  "omitted": false,
                   "items": {
-                    "linkType": "Entry",
                     "type": "Link",
                     "validations": [
                       {
@@ -176,32 +323,34 @@ http_interactions:
                           "winner"
                         ]
                       }
-                    ]
-                  },
-                  "localized": false,
-                  "name": "Gewinner*innen",
-                  "omitted": false,
-                  "required": false,
-                  "type": "Array"
+                    ],
+                    "linkType": "Entry"
+                  }
                 },
                 {
-                  "disabled": true,
                   "id": "winnersIds",
+                  "name": "Gewinner*innen",
+                  "type": "Array",
+                  "localized": false,
+                  "required": false,
+                  "disabled": true,
+                  "omitted": false,
                   "items": {
                     "type": "Symbol",
-                    "validations": []
-                  },
-                  "localized": false,
-                  "name": "Gewinner*innen",
-                  "omitted": false,
-                  "required": false,
-                  "type": "Array"
+                    "validations": [
+
+                    ]
+                  }
                 },
                 {
-                  "disabled": false,
                   "id": "tags",
+                  "name": "Tags",
+                  "type": "Array",
+                  "localized": false,
+                  "required": false,
+                  "disabled": false,
+                  "omitted": false,
                   "items": {
-                    "linkType": "Entry",
                     "type": "Link",
                     "validations": [
                       {
@@ -209,32 +358,34 @@ http_interactions:
                           "tag"
                         ]
                       }
-                    ]
-                  },
-                  "localized": false,
-                  "name": "Tags",
-                  "omitted": false,
-                  "required": false,
-                  "type": "Array"
+                    ],
+                    "linkType": "Entry"
+                  }
                 },
                 {
-                  "disabled": true,
                   "id": "tagNames",
+                  "name": "Tags",
+                  "type": "Array",
+                  "localized": true,
+                  "required": false,
+                  "disabled": true,
+                  "omitted": false,
                   "items": {
                     "type": "Symbol",
-                    "validations": []
-                  },
-                  "localized": true,
-                  "name": "Tags",
-                  "omitted": false,
-                  "required": false,
-                  "type": "Array"
+                    "validations": [
+
+                    ]
+                  }
                 },
                 {
-                  "disabled": false,
                   "id": "related_news",
+                  "name": "Ähnliche Artikel",
+                  "type": "Array",
+                  "localized": false,
+                  "required": false,
+                  "disabled": false,
+                  "omitted": false,
                   "items": {
-                    "linkType": "Entry",
                     "type": "Link",
                     "validations": [
                       {
@@ -243,138 +394,488 @@ http_interactions:
                         ],
                         "message": "Es können nur News-Artikel referenziert werden"
                       }
-                    ]
-                  },
-                  "localized": false,
-                  "name": "Ähnliche Artikel",
-                  "omitted": false,
-                  "required": false,
-                  "type": "Array"
+                    ],
+                    "linkType": "Entry"
+                  }
                 },
                 {
-                  "disabled": false,
                   "id": "wpId",
-                  "localized": false,
                   "name": "Wordpress-ID",
-                  "omitted": false,
+                  "type": "Integer",
+                  "localized": false,
                   "required": false,
-                  "type": "Integer"
+                  "disabled": false,
+                  "omitted": false
                 },
                 {
-                  "disabled": false,
                   "id": "migrationStatus",
-                  "localized": false,
                   "name": "Status der Migration zu Rich Text",
-                  "omitted": false,
+                  "type": "Symbol",
+                  "localized": false,
                   "required": false,
-                  "type": "Symbol"
+                  "disabled": false,
+                  "omitted": false
                 }
-              ],
-              "name": "Artikel",
+              ]
+            },
+            {
               "sys": {
-                "createdAt": "2016-09-13T14:05:58.389Z",
+                "space": {
+                  "sys": {
+                    "type": "Link",
+                    "linkType": "Space",
+                    "id": "thownz9vc5w0"
+                  }
+                },
+                "id": "youtube_video",
+                "type": "ContentType",
+                "createdAt": "2020-01-27T16:11:01.374Z",
+                "updatedAt": "2020-01-27T16:11:01.374Z",
                 "environment": {
                   "sys": {
                     "id": "master",
-                    "linkType": "Environment",
-                    "type": "Link"
+                    "type": "Link",
+                    "linkType": "Environment"
                   }
                 },
-                "id": "news",
-                "revision": 46,
-                "space": {
-                  "sys": {
-                    "id": "thownz9vc5w0",
-                    "linkType": "Space",
-                    "type": "Link"
-                  }
-                },
-                "type": "ContentType",
-                "updatedAt": "2020-02-27T17:50:06.646Z"
-              }
-            },
-            {
+                "revision": 1
+              },
+              "displayField": "title",
+              "name": "YouTube Video",
               "description": "",
-              "displayField": "nickname",
               "fields": [
                 {
-                  "disabled": false,
-                  "id": "nickname",
+                  "id": "video_id",
+                  "name": "Video-ID",
+                  "type": "Symbol",
                   "localized": false,
-                  "name": "Öffentlicher Name",
-                  "omitted": false,
                   "required": true,
-                  "type": "Symbol"
+                  "disabled": false,
+                  "omitted": false
                 },
                 {
-                  "disabled": false,
-                  "id": "biOrdinal",
-                  "localized": false,
-                  "name": "Nummer des Grundeinkommens",
-                  "omitted": false,
-                  "required": true,
-                  "type": "Integer"
-                },
-                {
-                  "disabled": false,
-                  "id": "entrantID",
-                  "localized": false,
-                  "name": "User ID",
-                  "omitted": false,
-                  "required": true,
-                  "type": "Integer"
-                },
-                {
-                  "disabled": false,
-                  "id": "headerImage",
-                  "linkType": "Asset",
-                  "localized": true,
-                  "name": "Header-Foto",
-                  "omitted": false,
-                  "required": false,
-                  "type": "Link"
-                },
-                {
-                  "disabled": false,
                   "id": "title",
+                  "name": "Titel",
+                  "type": "Symbol",
                   "localized": false,
-                  "name": "Überschrift",
-                  "omitted": false,
+                  "required": true,
+                  "disabled": false,
+                  "omitted": false
+                }
+              ]
+            },
+            {
+              "sys": {
+                "space": {
+                  "sys": {
+                    "type": "Link",
+                    "linkType": "Space",
+                    "id": "thownz9vc5w0"
+                  }
+                },
+                "id": "rich_image",
+                "type": "ContentType",
+                "createdAt": "2019-08-22T13:17:21.690Z",
+                "updatedAt": "2020-01-20T14:26:18.054Z",
+                "environment": {
+                  "sys": {
+                    "id": "master",
+                    "type": "Link",
+                    "linkType": "Environment"
+                  }
+                },
+                "revision": 8
+              },
+              "displayField": "caption",
+              "name": "Abbildung",
+              "description": "Abbildung mit Beschreibung und Urhebernachweis",
+              "fields": [
+                {
+                  "id": "caption",
+                  "name": "Bildunterschrift",
+                  "type": "Symbol",
+                  "localized": false,
                   "required": false,
-                  "type": "Symbol"
+                  "disabled": false,
+                  "omitted": false
                 },
                 {
+                  "id": "credits",
+                  "name": "Fotonachweis",
+                  "type": "Symbol",
+                  "localized": false,
+                  "required": false,
                   "disabled": false,
+                  "omitted": false
+                },
+                {
+                  "id": "image",
+                  "name": "Bild",
+                  "type": "Link",
+                  "localized": false,
+                  "required": true,
+                  "disabled": false,
+                  "omitted": false,
+                  "linkType": "Asset"
+                },
+                {
+                  "id": "position",
+                  "name": "Position",
+                  "type": "Symbol",
+                  "localized": true,
+                  "required": true,
+                  "disabled": false,
+                  "omitted": false
+                }
+              ]
+            },
+            {
+              "sys": {
+                "space": {
+                  "sys": {
+                    "type": "Link",
+                    "linkType": "Space",
+                    "id": "thownz9vc5w0"
+                  }
+                },
+                "id": "button",
+                "type": "ContentType",
+                "createdAt": "2020-01-17T08:28:40.935Z",
+                "updatedAt": "2020-01-17T08:28:49.897Z",
+                "environment": {
+                  "sys": {
+                    "id": "master",
+                    "type": "Link",
+                    "linkType": "Environment"
+                  }
+                },
+                "revision": 2
+              },
+              "displayField": "text",
+              "name": "Button",
+              "description": "",
+              "fields": [
+                {
+                  "id": "text",
+                  "name": "text",
+                  "type": "Symbol",
+                  "localized": false,
+                  "required": true,
+                  "disabled": false,
+                  "omitted": false
+                },
+                {
+                  "id": "href",
+                  "name": "href",
+                  "type": "Symbol",
+                  "localized": false,
+                  "required": true,
+                  "disabled": false,
+                  "omitted": false
+                }
+              ]
+            },
+            {
+              "sys": {
+                "space": {
+                  "sys": {
+                    "type": "Link",
+                    "linkType": "Space",
+                    "id": "thownz9vc5w0"
+                  }
+                },
+                "id": "simple_data_record",
+                "type": "ContentType",
+                "createdAt": "2019-05-28T14:48:35.414Z",
+                "updatedAt": "2019-07-09T15:35:13.487Z",
+                "environment": {
+                  "sys": {
+                    "id": "master",
+                    "type": "Link",
+                    "linkType": "Environment"
+                  }
+                },
+                "revision": 13
+              },
+              "displayField": "internal_title",
+              "name": "Einfache Datenzuordnung",
+              "description": "",
+              "fields": [
+                {
+                  "id": "internal_title",
+                  "name": "Bezeichnung (wird nicht angezeigt)",
+                  "type": "Symbol",
+                  "localized": false,
+                  "required": false,
+                  "disabled": false,
+                  "omitted": false
+                },
+                {
+                  "id": "key",
+                  "name": "Schlüssel (auf keinen Fall ändern)",
+                  "type": "Symbol",
+                  "localized": false,
+                  "required": true,
+                  "disabled": false,
+                  "omitted": false
+                },
+                {
+                  "id": "value",
+                  "name": "Wert",
+                  "type": "Symbol",
+                  "localized": false,
+                  "required": true,
+                  "disabled": false,
+                  "omitted": false
+                }
+              ]
+            },
+            {
+              "sys": {
+                "space": {
+                  "sys": {
+                    "type": "Link",
+                    "linkType": "Space",
+                    "id": "thownz9vc5w0"
+                  }
+                },
+                "id": "media_coverage_item",
+                "type": "ContentType",
+                "createdAt": "2019-05-14T12:11:54.560Z",
+                "updatedAt": "2019-05-14T12:11:54.560Z",
+                "environment": {
+                  "sys": {
+                    "id": "master",
+                    "type": "Link",
+                    "linkType": "Environment"
+                  }
+                },
+                "revision": 1
+              },
+              "displayField": "title",
+              "name": "Medienecho",
+              "description": "",
+              "fields": [
+                {
+                  "id": "title",
+                  "name": "Titel",
+                  "type": "Symbol",
+                  "localized": false,
+                  "required": true,
+                  "disabled": false,
+                  "omitted": false
+                },
+                {
+                  "id": "publication_date",
+                  "name": "Veröffentlichungsdatum",
+                  "type": "Date",
+                  "localized": false,
+                  "required": true,
+                  "disabled": false,
+                  "omitted": false
+                },
+                {
+                  "id": "publisher",
+                  "name": "Quelle",
+                  "type": "Symbol",
+                  "localized": false,
+                  "required": true,
+                  "disabled": false,
+                  "omitted": false
+                },
+                {
+                  "id": "url",
+                  "name": "URL",
+                  "type": "Symbol",
+                  "localized": false,
+                  "required": true,
+                  "disabled": false,
+                  "omitted": false
+                }
+              ]
+            },
+            {
+              "sys": {
+                "space": {
+                  "sys": {
+                    "type": "Link",
+                    "linkType": "Space",
+                    "id": "thownz9vc5w0"
+                  }
+                },
+                "id": "press_release",
+                "type": "ContentType",
+                "createdAt": "2016-09-17T16:54:27.326Z",
+                "updatedAt": "2019-05-04T12:34:47.508Z",
+                "environment": {
+                  "sys": {
+                    "id": "master",
+                    "type": "Link",
+                    "linkType": "Environment"
+                  }
+                },
+                "revision": 8
+              },
+              "displayField": "title",
+              "name": "Pressemitteilung",
+              "description": "",
+              "fields": [
+                {
+                  "id": "title",
+                  "name": "Titel",
+                  "type": "Symbol",
+                  "localized": false,
+                  "required": true,
+                  "disabled": false,
+                  "omitted": false
+                },
+                {
                   "id": "subtitle",
+                  "name": "Untertitel",
+                  "type": "Symbol",
                   "localized": false,
-                  "name": "Unterüberschrift",
-                  "omitted": false,
-                  "required": false,
-                  "type": "Symbol"
+                  "required": true,
+                  "disabled": false,
+                  "omitted": false
                 },
                 {
-                  "disabled": false,
-                  "id": "abstract",
+                  "id": "release_date",
+                  "name": "Datum",
+                  "type": "Date",
                   "localized": false,
-                  "name": "Einleitungsparagraph",
-                  "omitted": false,
-                  "required": false,
-                  "type": "Symbol"
+                  "required": true,
+                  "disabled": false,
+                  "omitted": false
                 },
                 {
-                  "disabled": false,
-                  "id": "story",
+                  "id": "content",
+                  "name": "Seiteninhalt",
+                  "type": "Text",
                   "localized": false,
-                  "name": "Geschichte",
-                  "omitted": false,
-                  "required": false,
-                  "type": "Text"
+                  "required": true,
+                  "disabled": false,
+                  "omitted": false
                 },
                 {
+                  "id": "slug",
+                  "name": "Slug",
+                  "type": "Symbol",
+                  "localized": false,
+                  "required": true,
                   "disabled": false,
-                  "id": "news",
+                  "omitted": false
+                }
+              ]
+            },
+            {
+              "sys": {
+                "space": {
+                  "sys": {
+                    "type": "Link",
+                    "linkType": "Space",
+                    "id": "thownz9vc5w0"
+                  }
+                },
+                "id": "milestone",
+                "type": "ContentType",
+                "createdAt": "2018-01-26T23:42:46.890Z",
+                "updatedAt": "2019-01-28T14:05:29.627Z",
+                "environment": {
+                  "sys": {
+                    "id": "master",
+                    "type": "Link",
+                    "linkType": "Environment"
+                  }
+                },
+                "revision": 18
+              },
+              "displayField": "title",
+              "name": "Highlight",
+              "description": "",
+              "fields": [
+                {
+                  "id": "title",
+                  "name": "Titel",
+                  "type": "Symbol",
+                  "localized": false,
+                  "required": true,
+                  "disabled": false,
+                  "omitted": false
+                },
+                {
+                  "id": "date",
+                  "name": "Datum",
+                  "type": "Date",
+                  "localized": false,
+                  "required": true,
+                  "disabled": false,
+                  "omitted": false
+                },
+                {
+                  "id": "type",
+                  "name": "Typ",
+                  "type": "Symbol",
+                  "localized": false,
+                  "required": false,
+                  "disabled": false,
+                  "omitted": false
+                },
+                {
+                  "id": "image",
+                  "name": "Bild",
+                  "type": "Link",
+                  "localized": false,
+                  "required": false,
+                  "disabled": false,
+                  "omitted": false,
+                  "linkType": "Asset"
+                },
+                {
+                  "id": "link",
+                  "name": "Link",
+                  "type": "Symbol",
+                  "localized": false,
+                  "required": false,
+                  "disabled": false,
+                  "omitted": false
+                },
+                {
+                  "id": "video_preview",
+                  "name": "Video Vorschaubild",
+                  "type": "Link",
+                  "localized": true,
+                  "required": false,
+                  "disabled": false,
+                  "omitted": false,
+                  "linkType": "Asset"
+                },
+                {
+                  "id": "video_id",
+                  "name": "Video ID",
+                  "type": "Symbol",
+                  "localized": false,
+                  "required": false,
+                  "disabled": false,
+                  "omitted": false
+                },
+                {
+                  "id": "description",
+                  "name": "Beschreibung",
+                  "type": "Text",
+                  "localized": false,
+                  "required": false,
+                  "disabled": false,
+                  "omitted": false
+                },
+                {
+                  "id": "related_news",
+                  "name": "News",
+                  "type": "Array",
+                  "localized": false,
+                  "required": false,
+                  "disabled": false,
+                  "omitted": false,
                   "items": {
-                    "linkType": "Entry",
                     "type": "Link",
                     "validations": [
                       {
@@ -382,46 +883,502 @@ http_interactions:
                           "news"
                         ]
                       }
-                    ]
-                  },
-                  "localized": false,
-                  "name": "Newsartikel",
-                  "omitted": false,
-                  "required": false,
-                  "type": "Array"
-                },
-                {
-                  "disabled": false,
-                  "id": "achievement",
-                  "localized": false,
-                  "name": "(z.B. hat ihr eigenes Unternehmen gegründet.)",
-                  "omitted": false,
-                  "required": false,
-                  "type": "Symbol"
+                    ],
+                    "linkType": "Entry"
+                  }
                 }
-              ],
-              "name": "Gewinner*in",
+              ]
+            },
+            {
               "sys": {
-                "createdAt": "2016-09-26T15:22:20.444Z",
+                "space": {
+                  "sys": {
+                    "type": "Link",
+                    "linkType": "Space",
+                    "id": "thownz9vc5w0"
+                  }
+                },
+                "id": "jobs",
+                "type": "ContentType",
+                "createdAt": "2016-09-02T16:41:50.341Z",
+                "updatedAt": "2018-08-14T10:03:14.096Z",
                 "environment": {
                   "sys": {
                     "id": "master",
-                    "linkType": "Environment",
-                    "type": "Link"
+                    "type": "Link",
+                    "linkType": "Environment"
+                  }
+                },
+                "revision": 9
+              },
+              "displayField": "title",
+              "name": "Job",
+              "description": "",
+              "fields": [
+                {
+                  "id": "title",
+                  "name": "Stellenbezeichnung",
+                  "type": "Symbol",
+                  "localized": false,
+                  "required": true,
+                  "disabled": false,
+                  "omitted": false
+                },
+                {
+                  "id": "area",
+                  "name": "Arbeitsbereich",
+                  "type": "Symbol",
+                  "localized": false,
+                  "required": true,
+                  "disabled": false,
+                  "omitted": false
+                },
+                {
+                  "id": "publishedAt",
+                  "name": "Veröffentlichungsdatum",
+                  "type": "Date",
+                  "localized": false,
+                  "required": true,
+                  "disabled": false,
+                  "omitted": false
+                },
+                {
+                  "id": "startWorkAt",
+                  "name": "Einstiegsdatum",
+                  "type": "Date",
+                  "localized": false,
+                  "required": true,
+                  "disabled": false,
+                  "omitted": false
+                },
+                {
+                  "id": "workingHours",
+                  "name": "Zeitlicher Umfang",
+                  "type": "Symbol",
+                  "localized": false,
+                  "required": true,
+                  "disabled": false,
+                  "omitted": false
+                },
+                {
+                  "id": "jobOfferFile",
+                  "name": "Stellenbeschreibung als Datei",
+                  "type": "Link",
+                  "localized": false,
+                  "required": false,
+                  "disabled": false,
+                  "omitted": false,
+                  "linkType": "Asset"
+                },
+                {
+                  "id": "job_offer_url",
+                  "name": "Stellenbeschreibung als Link",
+                  "type": "Symbol",
+                  "localized": false,
+                  "required": false,
+                  "disabled": false,
+                  "omitted": false
+                }
+              ]
+            },
+            {
+              "sys": {
+                "space": {
+                  "sys": {
+                    "type": "Link",
+                    "linkType": "Space",
+                    "id": "thownz9vc5w0"
                   }
                 },
                 "id": "winner",
-                "revision": 9,
-                "space": {
+                "type": "ContentType",
+                "createdAt": "2016-09-26T15:22:20.444Z",
+                "updatedAt": "2017-11-14T05:40:13.609Z",
+                "environment": {
                   "sys": {
-                    "id": "thownz9vc5w0",
-                    "linkType": "Space",
-                    "type": "Link"
+                    "id": "master",
+                    "type": "Link",
+                    "linkType": "Environment"
                   }
                 },
+                "revision": 9
+              },
+              "displayField": "nickname",
+              "name": "Gewinner*in",
+              "description": "",
+              "fields": [
+                {
+                  "id": "nickname",
+                  "name": "Öffentlicher Name",
+                  "type": "Symbol",
+                  "localized": false,
+                  "required": true,
+                  "disabled": false,
+                  "omitted": false
+                },
+                {
+                  "id": "biOrdinal",
+                  "name": "Nummer des Grundeinkommens",
+                  "type": "Integer",
+                  "localized": false,
+                  "required": true,
+                  "disabled": false,
+                  "omitted": false
+                },
+                {
+                  "id": "entrantID",
+                  "name": "User ID",
+                  "type": "Integer",
+                  "localized": false,
+                  "required": true,
+                  "disabled": false,
+                  "omitted": false
+                },
+                {
+                  "id": "headerImage",
+                  "name": "Header-Foto",
+                  "type": "Link",
+                  "localized": true,
+                  "required": false,
+                  "disabled": false,
+                  "omitted": false,
+                  "linkType": "Asset"
+                },
+                {
+                  "id": "title",
+                  "name": "Überschrift",
+                  "type": "Symbol",
+                  "localized": false,
+                  "required": false,
+                  "disabled": false,
+                  "omitted": false
+                },
+                {
+                  "id": "subtitle",
+                  "name": "Unterüberschrift",
+                  "type": "Symbol",
+                  "localized": false,
+                  "required": false,
+                  "disabled": false,
+                  "omitted": false
+                },
+                {
+                  "id": "abstract",
+                  "name": "Einleitungsparagraph",
+                  "type": "Symbol",
+                  "localized": false,
+                  "required": false,
+                  "disabled": false,
+                  "omitted": false
+                },
+                {
+                  "id": "story",
+                  "name": "Geschichte",
+                  "type": "Text",
+                  "localized": false,
+                  "required": false,
+                  "disabled": false,
+                  "omitted": false
+                },
+                {
+                  "id": "news",
+                  "name": "Newsartikel",
+                  "type": "Array",
+                  "localized": false,
+                  "required": false,
+                  "disabled": false,
+                  "omitted": false,
+                  "items": {
+                    "type": "Link",
+                    "validations": [
+                      {
+                        "linkContentType": [
+                          "news"
+                        ]
+                      }
+                    ],
+                    "linkType": "Entry"
+                  }
+                },
+                {
+                  "id": "achievement",
+                  "name": "(z.B. hat ihr eigenes Unternehmen gegründet.)",
+                  "type": "Symbol",
+                  "localized": false,
+                  "required": false,
+                  "disabled": false,
+                  "omitted": false
+                }
+              ]
+            },
+            {
+              "sys": {
+                "space": {
+                  "sys": {
+                    "type": "Link",
+                    "linkType": "Space",
+                    "id": "thownz9vc5w0"
+                  }
+                },
+                "id": "pages",
                 "type": "ContentType",
-                "updatedAt": "2017-11-14T05:40:13.609Z"
-              }
+                "createdAt": "2016-06-14T16:17:30.279Z",
+                "updatedAt": "2017-11-04T14:25:21.023Z",
+                "environment": {
+                  "sys": {
+                    "id": "master",
+                    "type": "Link",
+                    "linkType": "Environment"
+                  }
+                },
+                "revision": 12
+              },
+              "displayField": "title",
+              "name": "Inhaltsseite",
+              "description": "",
+              "fields": [
+                {
+                  "id": "title",
+                  "name": "Überschrift",
+                  "type": "Symbol",
+                  "localized": true,
+                  "required": true,
+                  "disabled": false,
+                  "omitted": false
+                },
+                {
+                  "id": "subtitle",
+                  "name": "Untertitel",
+                  "type": "Symbol",
+                  "localized": false,
+                  "required": false,
+                  "disabled": false,
+                  "omitted": false
+                },
+                {
+                  "id": "content",
+                  "name": "Seiteninhalt",
+                  "type": "Text",
+                  "localized": true,
+                  "required": true,
+                  "disabled": false,
+                  "omitted": false
+                },
+                {
+                  "id": "slug",
+                  "name": "Slug",
+                  "type": "Symbol",
+                  "localized": true,
+                  "required": true,
+                  "disabled": false,
+                  "omitted": false
+                },
+                {
+                  "id": "menuId",
+                  "name": "Menü",
+                  "type": "Symbol",
+                  "localized": false,
+                  "required": false,
+                  "disabled": false,
+                  "omitted": false
+                },
+                {
+                  "id": "menuOrder",
+                  "name": "Reihenfolge im Menü",
+                  "type": "Integer",
+                  "localized": false,
+                  "required": true,
+                  "disabled": false,
+                  "omitted": false
+                },
+                {
+                  "id": "headerImage",
+                  "name": "Header-Bild",
+                  "type": "Link",
+                  "localized": false,
+                  "required": false,
+                  "disabled": false,
+                  "omitted": false,
+                  "linkType": "Asset"
+                },
+                {
+                  "id": "author",
+                  "name": "Autor*in",
+                  "type": "Link",
+                  "localized": false,
+                  "required": false,
+                  "disabled": false,
+                  "omitted": false,
+                  "linkType": "Entry"
+                },
+                {
+                  "id": "is_fancy",
+                  "name": "Ist diese Seite fancy (mit Header-Foto)?",
+                  "type": "Boolean",
+                  "localized": false,
+                  "required": false,
+                  "disabled": false,
+                  "omitted": false
+                }
+              ]
+            },
+            {
+              "sys": {
+                "space": {
+                  "sys": {
+                    "type": "Link",
+                    "linkType": "Space",
+                    "id": "thownz9vc5w0"
+                  }
+                },
+                "id": "profile_message_to_all_users",
+                "type": "ContentType",
+                "createdAt": "2017-03-28T19:30:30.985Z",
+                "updatedAt": "2017-05-27T17:34:50.725Z",
+                "environment": {
+                  "sys": {
+                    "id": "master",
+                    "type": "Link",
+                    "linkType": "Environment"
+                  }
+                },
+                "revision": 3
+              },
+              "displayField": "title",
+              "name": "Team-Nachricht im User-Profil",
+              "description": "",
+              "fields": [
+                {
+                  "id": "date",
+                  "name": "Datum",
+                  "type": "Date",
+                  "localized": false,
+                  "required": true,
+                  "disabled": false,
+                  "omitted": false
+                },
+                {
+                  "id": "team_member",
+                  "name": "Autor*in",
+                  "type": "Link",
+                  "localized": false,
+                  "required": true,
+                  "disabled": false,
+                  "omitted": false,
+                  "linkType": "Entry"
+                },
+                {
+                  "id": "title",
+                  "name": "Überschrift",
+                  "type": "Symbol",
+                  "localized": false,
+                  "required": true,
+                  "disabled": false,
+                  "omitted": false
+                },
+                {
+                  "id": "text",
+                  "name": "Text",
+                  "type": "Text",
+                  "localized": false,
+                  "required": true,
+                  "disabled": false,
+                  "omitted": false
+                }
+              ]
+            },
+            {
+              "sys": {
+                "space": {
+                  "sys": {
+                    "type": "Link",
+                    "linkType": "Space",
+                    "id": "thownz9vc5w0"
+                  }
+                },
+                "id": "author",
+                "type": "ContentType",
+                "createdAt": "2016-09-26T15:13:40.432Z",
+                "updatedAt": "2017-02-16T00:18:42.544Z",
+                "environment": {
+                  "sys": {
+                    "id": "master",
+                    "type": "Link",
+                    "linkType": "Environment"
+                  }
+                },
+                "revision": 7
+              },
+              "displayField": "name",
+              "name": "Autor*in",
+              "description": "",
+              "fields": [
+                {
+                  "id": "name",
+                  "name": "Name",
+                  "type": "Symbol",
+                  "localized": false,
+                  "required": true,
+                  "disabled": false,
+                  "omitted": false
+                },
+                {
+                  "id": "portrait",
+                  "name": "Bild",
+                  "type": "Link",
+                  "localized": false,
+                  "required": true,
+                  "disabled": false,
+                  "omitted": false,
+                  "linkType": "Asset"
+                },
+                {
+                  "id": "emailaddress",
+                  "name": "E-Mail-Adresse",
+                  "type": "Symbol",
+                  "localized": false,
+                  "required": true,
+                  "disabled": false,
+                  "omitted": false
+                }
+              ]
+            },
+            {
+              "sys": {
+                "space": {
+                  "sys": {
+                    "type": "Link",
+                    "linkType": "Space",
+                    "id": "thownz9vc5w0"
+                  }
+                },
+                "id": "category",
+                "type": "ContentType",
+                "createdAt": "2016-09-26T15:17:18.067Z",
+                "updatedAt": "2016-09-26T15:17:18.067Z",
+                "environment": {
+                  "sys": {
+                    "id": "master",
+                    "type": "Link",
+                    "linkType": "Environment"
+                  }
+                },
+                "revision": 1
+              },
+              "displayField": "name",
+              "name": "Kategorie",
+              "description": "",
+              "fields": [
+                {
+                  "id": "name",
+                  "name": "Name",
+                  "type": "Symbol",
+                  "localized": false,
+                  "required": true,
+                  "disabled": false,
+                  "omitted": false
+                }
+              ]
             }
           ]
         }
