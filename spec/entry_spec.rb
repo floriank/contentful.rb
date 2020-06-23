@@ -792,15 +792,15 @@ describe Contentful::Entry do
         class Winner < Contentful::Entry; end
 
         module Elements
-          class RichImage < Contentful::Asset; end
+          class RichImage < Contentful::Entry; end
         end
       end
     end
 
     let(:client) do
       Contentful::Client.new(
-        space: 'cfexampleapi',
-        access_token: 'b4c0n73n7fu1',
+        space: 'thownz9vc5w0',
+        access_token: '<really-not-important-and-also-redacted>',
         reuse_entries: false,
         dynamic_entries: :auto,
         max_include_resolution_depth: 4,
@@ -813,7 +813,17 @@ describe Contentful::Entry do
       )
     end
 
-    let(:entries) { client.entries }
+    let(:entries) do
+      client.entries(
+        content_type: 'winner',
+        'fields.biOrdinal': 34,
+        include: 2,
+        limit: 1,
+        locale: 'de-DE',
+        order: 'sys.createdAt'
+      )
+    end
+
     let(:winner) { entries.first }
     let(:article) { winner.news.first }
     let(:rich_text) { article.rich_text }
@@ -826,7 +836,8 @@ describe Contentful::Entry do
     it 'encounters no bug during hydration' do
       vcr('entries/issue_225') do
         expect(article.id).to eq 'vGienFOrtIM8G8IAo2uuA'
-        p rich_text['content'][13]['data']['target']
+        expect(rich_text['content'][13]['data']['target'].is_a?(Contentful::Entry)).to be_truthy
+        expect(rich_text['content'][13]['data']['target'].image.url).to eq(image_url)
       end
     end
 
@@ -837,8 +848,8 @@ describe Contentful::Entry do
         vcr('entries/issue_225_broken') do
           expect(article.id).to eq 'vGienFOrtIM8G8IAo2uuA'
 
-          # now what
-          p rich_text['content'][13]['data']['target']
+          expect(rich_text['content'][13]['data']['target'].is_a?(Contentful::Entry)).to be_truthy
+          expect(rich_text['content'][13]['data']['target'].image.url).to eq(image_url)
         end
       end
     end
